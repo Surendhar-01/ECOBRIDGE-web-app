@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_change_language">भाषा बदला</string>
+    <string name="action_cancel">रद्द करा</string>
+    <string name="action_close">बंद करा</string>
+    <string name="action_back">मागे</string>
+    <string name="action_retry">पुन्हा प्रयत्न करा</string>
+    <string name="action_sign_out">साइन आउट</string>
+    <string name="action_save">जतन करा</string>
+    <string name="action_continue">पुढे जा</string>
+    <string name="action_submit">सबमिट करा</string>
+    <string name="action_dismiss">रद्द करा</string>
+    <string name="action_ok">बरोबर</string>
+    <string name="action_allow_microphone">मायक्रोफोन सुरू करा</string>
+    <string name="action_listen">ऐका</string>
+    <string name="action_stop">थांबवा</string>
+    <string name="action_execute">चालवा</string>
+
+    <string name="cd_app_logo">ECO BRIDGES लोगो</string>
+    <string name="cd_selected">निवडलेले</string>
+    <string name="cd_read_aloud">मोठ्याने वाचा</string>
+    <string name="cd_continue">पुढे जा</string>
+    <string name="cd_offline">ऑफलाइन</string>
+    <string name="cd_voice_microphone">व्हॉइस मायक्रोफोन</string>
+
+    <string name="unit_kg">किलो</string>
+    <string name="unit_rupees">₹%1$s</string>
+    <string name="format_kg_value">%1$s किलो</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Collector hub header ===== -->
+    <string name="collector_e_waste_collector_hub">ई-कचरा संग्राहक केंद्र</string>
+    <string name="collector_collect_segregate_recycle">संग्रह करें • अलग करें • रीसायकल करें</string>
+    <string name="collector_notifications">सूचनाएं</string>
+
+    <!-- ===== Stat cards ===== -->
+    <string name="collector_today_s_earnings">आज की कमाई</string>
+    <string name="collector_this_month">इस महीने</string>
+    <string name="collector_pending_handover">हस्तांतरण शेष</string>
+    <string name="collector_total_cash_settled">कुल नकद प्राप्त</string>
+
+    <!-- ===== Recycler sections ===== -->
+    <string name="collector_authorized_formal_recyclers">अधिकृत औपचारिक रीसायकलर</string>
+    <string name="collector_cpcb_certified_partners_with_ratings_and_certifi">CPCB सत्यापित पार्टनर - रेटिंग एवं प्रमाणित वजन</string>
+    <string name="collector_scan_e_waste">स्कैन करें</string>
+    <string name="collector_ai_camera_valuation_create_a_digital_lot">AI कैमरा मूल्यांकन • डिजिटल लॉट बनाएं</string>
+    <string name="collector_ai_camera_valuation">AI कैमरा मूल्यांकन</string>
+    <string name="collector_nearby_recyclers">आसपास के रीसायकलर</string>
+    <string name="collector_find_authorized_recyclers_near_your_location">अपने आस-पास अधिकृत रीसायकलर खोजें</string>
+    <string name="collector_view_all">सभी देखें</string>
+    <string name="collector_rate_outside_market_range_verify_before_handover">दर बाजार सीमा से बाहर — हस्तांतरण से पहले जांचें</string>
+    <string name="collector_authorized_recyclers_and_aggregators">अधिकृत रीसायकलर एवं एग्रीगेटर</string>
+    <string name="collector_view_collection_points_on_live_map">लाइव मैप पर संग्रहण केंद्र देखें</string>
+
+    <!-- ===== Lot list and filters ===== -->
+    <string name="collector_filter_lots">लॉट फ़िल्टर करें</string>
+    <string name="collector_active_and_completed_digital_lots">सक्रिय एवं पूर्ण डिजिटल लॉट</string>
+    <string name="collector_date_newest">तारीख (नवीन)</string>
+    <string name="collector_date_oldest">तारीख (जुने)</string>
+    <string name="collector_all_status">सभी स्थिति</string>
+    <string name="collector_all_categories">सभी श्रेणियां</string>
+    <string name="collector_clear">साफ़ करें</string>
+    <string name="collector_create_lot">लॉट बनाएं</string>
+    <string name="collector_log_a_new_e_waste_lot">नया लॉट दर्ज करें</string>
+    <string name="collector_usable_financial_ledger_and_receipts">वित्तीय खाता एवं रसीदें</string>
+
+    <!-- ===== AI assistant ===== -->
+    <string name="collector_ask_ai_e_waste_assistant">AI ई-वेस्ट असिस्टेंट से पूछें</string>
+    <string name="collector_voice_queries_on_disposal_prices_and_cpcb_rules">निपटान, दरें और CPCB नियमों पर वॉइस क्वेरी</string>
+
+    <!-- ===== Location sharing ===== -->
+    <string name="collector_share_my_location">मेरा स्थान साझा करें</string>
+    <string name="collector_never_shared_yet">अभी तक साझा नहीं किया</string>
+    <string name="collector_nearby_collectors_50_km">आसपास के संग्राहक (50 किमी)</string>
+    <string name="collector_no_other_collectors_sharing_right_now">अभी कोई अन्य संग्राहक शेयर नहीं कर रहा है</string>
+    <string name="collector_enable_location_sharing_to_see_the_network">नेटवर्क देखने के लिए स्थान साझा करना चालू करें</string>
+    <string name="collector_nearby_collector">आस-पास संग्राहक</string>
+    <string name="collector_connections_and_quotations">संपर्क और कोटेशन</string>
+    <string name="collector_no_live_requests_reach_out_to_a_recycler_below">कोई सक्रिय अनुरोध नहीं। नीचे किसी रीसायकलर से संपर्क करें।</string>
+    <string name="collector_reach_a_recycler">रीसायकलर से संपर्क करें</string>
+
+    <!-- ===== Price board ===== -->
+    <string name="price_government_and_recycler_price_board">सरकारी एवं रीसायकलर मूल्य तालिका</string>
+    <string name="price_fair_market_rates_benchmarked_to_cpcb_epr_2022_r">सीपीसीबी ईपीआर 2022 नियमों पर आधारित निष्पक्ष दरें</string>
+    <string name="price_all_materials">सभी सामग्री</string>
+    <string name="price_authorized_buying_rate">अधिकृत खरीद दर</string>
+    <string name="price_authorized_rate_last_8_weeks_kg">अधिकृत दर • पिछले 8 सप्ताह (₹/किग्रा)</string>
+    <string name="price_create_lot_for_this_material">इस सामग्री का लॉट बनाएं</string>
+
+    <!-- ===== Pictorial safety ===== -->
+    <string name="safety_hazardous_waste_safety">खतरनाक ई-कचरा सुरक्षा</string>
+    <string name="safety_don_t_burn_or_leach_tap_icons_for_audio">कचरा न जलाएं • ऑडियो सुनने के लिए टैप करें</string>
+    <string name="safety_open_full_visual_safety_and_economics_manual">पूर्ण सुरक्षा एवं कमाई पुस्तिका देखें</string>
+    <string name="safety_do_not_do">कभी करें नहीं</string>
+    <string name="safety_audio">ऑडियो</string>
+
+    <!-- ===== Offline sync indicator ===== -->
+    <string name="offline_syncing_with_cloud">क्लाउड से सिंक हो रहा है...</string>
+    <string name="offline_offline_storage_active">ऑफलाइन मोड सक्रिय</string>
+    <string name="offline_unsyncedcount_lots_queued_offline">%1$d लॉट सिंक बाकी</string>
+    <string name="offline_cpcb_database_synced">डेटाबेस पूर्ण सिंक है</string>
+    <string name="offline_saved_locally_in_sqlite_will_sync_on_reconnect">लोकल रूम डेटाबेस में सुरक्षित। कनेक्शन पर सिंक होगा।</string>
+    <string name="offline_last_synced_at_lastsyncstr_offline_first_active">अंतिम सिंक समय: %1$s • ऑफलाइन-फर्स्ट तैयार</string>
+    <string name="offline_network_connectivity_mode">नेटवर्क कनेक्टिविटी मोड</string>
+
+    <!-- ===== Unit economics ===== -->
+    <string name="econ_economic_assessment_why_you_earn_more">आर्थिक विश्लेषण: आपकी कमाई कैसे बढ़ती है</string>
+    <string name="econ_informal_middlemen_only_pay_for_copper_and_burn_">स्थानीय कबाड़ी केवल तांबे का पैसा देते हैं। अधिकृत रीसायकलर सोना, लिथियम और चुंबक भी निकालते हैं, इसलिए आपको 25%% से 58%% अधिक नकद मिलता है।</string>
+
+    <!-- ===== Safety guidance section ===== -->
+    <string name="safetyguide_pictorial_and_audio_safety_guidance">चित्रमय एवं ऑडियो सुरक्षा गाइड</string>
+    <string name="safetyguide_backyard_processing_destroys_80_of_precious_meta">कबाड़ जलाने से 80%% कीमती धातुएं नष्ट होती हैं और फेफड़े खराब होते हैं।</string>
+</resources>

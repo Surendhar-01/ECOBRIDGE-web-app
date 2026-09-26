@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Collector hub header ===== -->
+    <string name="collector_e_waste_collector_hub">ई-कचरा संकलक केंद्र</string>
+    <string name="collector_collect_segregate_recycle">संकलन करा • वर्गीकरण करा • रीसायकल करा</string>
+    <string name="collector_notifications">सूचना</string>
+
+    <!-- ===== Stat cards ===== -->
+    <string name="collector_today_s_earnings">आजची कमाई</string>
+    <string name="collector_this_month">या महिन्यात</string>
+    <string name="collector_pending_handover">हस्तांतरण प्रलंबित</string>
+    <string name="collector_total_cash_settled">एकूण जमा रक्कम</string>
+
+    <!-- ===== Recycler sections ===== -->
+    <string name="collector_authorized_formal_recyclers">अधिकृत औपचारिक रीसायकलर</string>
+    <string name="collector_cpcb_certified_partners_with_ratings_and_certifi">CPCB प्रमाणित भागीदार - रेटिंग आणि खात्रीशीर वजन</string>
+    <string name="collector_scan_e_waste">स्कॅन करा</string>
+    <string name="collector_ai_camera_valuation_create_a_digital_lot">AI कॅमेरा मूल्यांकन • डिजिटल लॉट तयार करा</string>
+    <string name="collector_ai_camera_valuation">AI कॅमेरा मूल्यांकन</string>
+    <string name="collector_nearby_recyclers">जवळील रीसायकलर</string>
+    <string name="collector_find_authorized_recyclers_near_your_location">तुमच्या जवळील अधिकृत रीसायकलर शोधा</string>
+    <string name="collector_view_all">सर्व पहा</string>
+    <string name="collector_rate_outside_market_range_verify_before_handover">दर बाजार श्रेणीबाहेर — हस्तांतरणापूर्वी तपासा</string>
+    <string name="collector_authorized_recyclers_and_aggregators">अधिकृत रीसायकलर आणि संकलन केंद्रे</string>
+    <string name="collector_view_collection_points_on_live_map">थेट नकाशावर संकलन केंद्र पहा</string>
+
+    <!-- ===== Lot list and filters ===== -->
+    <string name="collector_filter_lots">लॉट फिल्टर करा</string>
+    <string name="collector_active_and_completed_digital_lots">सक्रिय व पूर्ण झालेले लॉट्स</string>
+    <string name="collector_date_newest">तारीख (नवीन)</string>
+    <string name="collector_date_oldest">तारीख (जुने)</string>
+    <string name="collector_all_status">सर्व स्थिती</string>
+    <string name="collector_all_categories">सर्व श्रेणी</string>
+    <string name="collector_clear">साफ करा</string>
+    <string name="collector_create_lot">लॉट तयार करा</string>
+    <string name="collector_log_a_new_e_waste_lot">नवीन लॉट नोंदवा</string>
+    <string name="collector_usable_financial_ledger_and_receipts">आर्थिक नोंदवही व पावत्या</string>
+
+    <!-- ===== AI assistant ===== -->
+    <string name="collector_ask_ai_e_waste_assistant">AI ई-वेस्ट सहायकाला विचारा</string>
+    <string name="collector_voice_queries_on_disposal_prices_and_cpcb_rules">विसर्जन, दर आणि CPCB नियमांवरील व्हॉइस प्रश्न</string>
+
+    <!-- ===== Location sharing ===== -->
+    <string name="collector_share_my_location">माझे ठिकाण शेअर करा</string>
+    <string name="collector_never_shared_yet">अजून शेअर केले नाही</string>
+    <string name="collector_nearby_collectors_50_km">जवळचे संकलक (50 किमी)</string>
+    <string name="collector_no_other_collectors_sharing_right_now">आत्ता इतर संकलक शेअर करत नाहीत</string>
+    <string name="collector_enable_location_sharing_to_see_the_network">नेटवर्क पाहण्यासाठी स्थान शेअरिंग सुरू करा</string>
+    <string name="collector_nearby_collector">जवळचा संकलक</string>
+    <string name="collector_connections_and_quotations">संपर्क आणि भाव पत्र</string>
+    <string name="collector_no_live_requests_reach_out_to_a_recycler_below">सक्रिय विनंती नाही. खालील रीसायकलरशी संपर्क साधा.</string>
+    <string name="collector_reach_a_recycler">रीसायकलरशी संपर्क साधा</string>
+
+    <!-- ===== Price board ===== -->
+    <string name="price_government_and_recycler_price_board">शासकीय व रीसायकलर भाव फलक</string>
+    <string name="price_fair_market_rates_benchmarked_to_cpcb_epr_2022_r">सीपीसीबी ईपीआर २०२२ नियमांवर आधारित वाजवी दर</string>
+    <string name="price_all_materials">सर्व साहित्य</string>
+    <string name="price_authorized_buying_rate">अधिकृत खरेदी दर</string>
+    <string name="price_authorized_rate_last_8_weeks_kg">अधिकृत दर • मागील 8 आठवडे (₹/किग्रा)</string>
+    <string name="price_create_lot_for_this_material">या साहित्याचा लॉट तयार करा</string>
+
+    <!-- ===== Pictorial safety ===== -->
+    <string name="safety_hazardous_waste_safety">धोकादायक कचरा सुरक्षा</string>
+    <string name="safety_don_t_burn_or_leach_tap_icons_for_audio">जाळू नका, ऍसिड नको • ऑडिओसाठी टॅप करा</string>
+    <string name="safety_open_full_visual_safety_and_economics_manual">संपूर्ण सुरक्षा व नफा पुस्तिका उघडा</string>
+    <string name="safety_do_not_do">कधीही करू नका</string>
+    <string name="safety_audio">ऑडिओ</string>
+
+    <!-- ===== Offline sync indicator ===== -->
+    <string name="offline_syncing_with_cloud">क्लाउडवर सिंक होत आहे...</string>
+    <string name="offline_offline_storage_active">ऑफलाइन मोड सुरू</string>
+    <string name="offline_unsyncedcount_lots_queued_offline">%1$d लॉट्स सिंक बाकी</string>
+    <string name="offline_cpcb_database_synced">डेटाबेस पूर्ण सिंक आहे</string>
+    <string name="offline_saved_locally_in_sqlite_will_sync_on_reconnect">स्थानिक रूम डेटाबेसमध्ये सुरक्षित. जोडणीवर सिंक होईल.</string>
+    <string name="offline_last_synced_at_lastsyncstr_offline_first_active">शेवटचे सिंक: %1$s • ऑफलाइन-फर्स्ट सक्रिय</string>
+    <string name="offline_network_connectivity_mode">नेटवर्क कनेक्टिव्हिटी मोड</string>
+
+    <!-- ===== Unit economics ===== -->
+    <string name="econ_economic_assessment_why_you_earn_more">आर्थिक फायदा: तुमची कमाई कशी वाढते</string>
+    <string name="econ_informal_middlemen_only_pay_for_copper_and_burn_">स्थानिक कबाडी फक्त तांब्याचे पैसे देतात. अधिकृत रिसायकलर सोने, लिथियम देखील काढतात, त्यामुळे तुम्हाला २५%% ते ५८%% जास्त नफा मिळतो.</string>
+
+    <!-- ===== Safety guidance section ===== -->
+    <string name="safetyguide_pictorial_and_audio_safety_guidance">चित्रमय व ऑडिओ सुरक्षा मार्गदर्शक</string>
+    <string name="safetyguide_backyard_processing_destroys_80_of_precious_meta">उघड्यावर जाळल्याने ८०%% मौल्यवान धातू जळून नष्ट होतात आणि आरोग्याला धोका होतो.</string>
+</resources>

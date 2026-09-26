@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Role sign-in / sign-up ===== -->
+    <string name="auth_title_suffix">%1$s प्रमाणीकरण</string>
+    <string name="auth_have_account">पहले से पंजीकृत हैं? साइन इन करें</string>
+    <string name="auth_need_account">नए हैं? खाता बनाएं</string>
+    <string name="auth_footer_legal">वैधानिक ई-कचरा (प्रबंधन) नियम, 2022 • Supabase Auth • केंद्रीय प्रदूषण नियंत्रण बोर्ड (CPCB) सत्यापित</string>
+    <string name="auth_use_different_account">दूसरा खाता इस्तेमाल करें</string>
+    <string name="auth_create_account_title">%1$s खाता बनाएं</string>
+    <string name="auth_create_account_body">आपका विवरण Supabase में सुरक्षित रूप से पंजीकृत होता है। बाद में उसी ईमेल और पासवर्ड से साइन इन करें।</string>
+    <string name="auth_official_email_title">आधिकारिक ईमेल प्रमाणीकरण</string>
+    <string name="auth_official_email_body">अपने पंजीकृत आधिकारिक ईमेल और पासवर्ड से Supabase Auth के माध्यम से साइन इन करें।</string>
+    <string name="auth_google_title">Google पहचान से साइन इन</string>
+    <string name="auth_google_subtitle">Credential Manager + Supabase ID टोकन</string>
+    <string name="auth_google_body">अपने सत्यापित Google खाते से साइन इन करें। id_token सुरक्षित रूप से Supabase से आदान-प्रदान होता है, फिर वैधानिक पात्रताएं CPCB राष्ट्रीय रजिस्ट्री से जांची जाती हैं।</string>
+    <string name="auth_google_tab">Google साइन-इन</string>
+    <string name="auth_email_tab">ईमेल और पासवर्ड</string>
+    <string name="auth_otp_tab">ओटीपी सत्यापन</string>
+    <string name="auth_incoming_alerts_title">प्राप्त इनबॉक्स और अलर्ट</string>
+    <string name="auth_opening_collector">अनौपचारिक कलेक्टर लॉगिन खोल रहे हैं…</string>
+    <string name="auth_opening_recycler">अधिकृत रीसायकलर लॉगिन खोल रहे हैं…</string>
+    <string name="auth_opening_admin">सरकारी प्रशासन लॉगिन खोल रहे हैं…</string>
+
+    <string name="auth_instructions_collector">प्रमाणित एग्रीगेटर पहुंच के लिए पंजीकृत मोबाइल ओटीपी, आधिकारिक ईमेल या Google खाते से लॉगिन करें।</string>
+    <string name="auth_instructions_recycler">वैधानिक सीपीसीबी-अधिकृत रीसायकलर पोर्टल। पंजीकृत मोबाइल, ईमेल या Google खाते से साइन इन करें।</string>
+    <string name="auth_instructions_admin">सीपीसीबी / पर्यावरण मंत्रालय आधिकारिक प्रशासन। अधिकृत मोबाइल ओटीपी, सरकारी ईमेल या Google खाते से प्रमाणित करें।</string>
+
+    <string name="error_access_denied">पहुँच अस्वीकृत</string>
+    <string name="error_role_mismatch">यह खाता %1$s के रूप में पंजीकृत है। यह %2$s पोर्टल तक नहीं पहुँच सकता।</string>
+    <string name="cd_hear_auth_guidance">प्रमाणीकरण मार्गदर्शन सुनें</string>
+    <string name="cd_error">त्रुटि</string>
+    <string name="cd_info">जानकारी</string>
+    <string name="cd_google_sign_in">Google साइन इन</string>
+
+    <!-- ===== Form fields ===== -->
+    <string name="field_full_name">पूरा नाम</string>
+    <string name="field_full_name_hint">आपका पूरा नाम</string>
+    <string name="field_mobile">मोबाइल नंबर</string>
+    <string name="field_mobile_hint">10 अंकों का मोबाइल</string>
+    <string name="field_email">ईमेल पता</string>
+    <string name="field_password_short">पासवर्ड</string>
+    <string name="field_official_email">आधिकारिक ईमेल पता</string>
+    <string name="field_password">पासवर्ड (कम से कम 6 अक्षर)</string>
+    <string name="field_password_hint">पासवर्ड चुनें</string>
+    <string name="field_confirm_password">पासवर्ड की पुष्टि करें</string>
+    <string name="field_confirm_password_hint">अपना पासवर्ड दोबारा लिखें</string>
+    <string name="phone_with_prefix">+91 %1$s</string>
+
+    <!-- ===== OTP flow ===== -->
+    <string name="otp_verification_pipeline_title">वैधानिक सत्यापन प्रक्रिया</string>
+    <string name="otp_card_title">मल्टी-चैनल ओटीपी प्रमाणीकरण</string>
+    <string name="otp_card_subtitle">अपने पंजीकृत मोबाइल (+91 एसएमएस), ईमेल और गूगल खाते पर सुरक्षित ओटीपी जनरेट करें और प्राप्त करें।</string>
+    <string name="otp_select_channel">ओटीपी प्राप्ति माध्यम चुनें</string>
+    <string name="otp_select_destination">ओटीपी प्राप्ति माध्यम चुनें:</string>
+    <string name="otp_all_channels_title">सभी माध्यम (मोबाइल + ईमेल + Google)</string>
+    <string name="otp_all_channels_subtitle">एसएमएस, ईमेल और गूगल पर एक साथ ओटीपी भेजें</string>
+    <string name="otp_mobile_title">पंजीकृत मोबाइल नंबर (+91 एसएमएस)</string>
+    <string name="otp_mobile_subtitle">सरकारी टेलीकॉम गेटवे के माध्यम से त्वरित एसएमएस</string>
+    <string name="otp_email_title">पंजीकृत आधिकारिक ईमेल</string>
+    <string name="otp_email_subtitle">आपके आधिकारिक इनबॉक्स में सुरक्षित ईमेल</string>
+    <string name="otp_google_title">Google खाता पहचान</string>
+    <string name="otp_google_subtitle">Google सुरक्षा चेतावनी और इन-ऐप सत्यापन</string>
+    <string name="otp_label_mobile">पंजीकृत मोबाइल नंबर</string>
+    <string name="otp_label_email">पंजीकृत ईमेल पता</string>
+    <string name="otp_label_google">Google खाता ईमेल</string>
+    <string name="otp_generate_button">प्रमाणीकरण ओटीपी जनरेट करें</string>
+    <string name="otp_generating">ओटीपी जनरेट और भेजा जा रहा है…</string>
+    <string name="otp_sent_live">हमने 6 अंकों का सत्यापन कोड भेजा है</string>
+    <string name="otp_sent_demo">डेमो ओटीपी बनाया गया</string>
+    <string name="otp_sent_notice">पंजीकृत मोबाइल +91 %1$s पर ओटीपी भेजा गया है</string>
+    <string name="otp_step2_title">चरण 2 — सत्यापन कोड दर्ज करें</string>
+    <string name="otp_credentials_accepted">%1$s के लिए पात्रताएं स्वीकृत। नीचे दिए कोड से साइन इन पूरा करें।</string>
+    <string name="otp_enter_code_header">6 अंकों का ओटीपी कोड दर्ज करें</string>
+    <string name="otp_verifying">पहचान सत्यापित की जा रही है…</string>
+    <string name="otp_verify_and_login">ओटीपी सत्यापित करें और साइन इन करें</string>
+    <string name="otp_resend">ओटीपी पुनः भेजें</string>
+    <string name="otp_resend_in">%1$d सेकंड में पुनः भेजें</string>
+    <string name="otp_auto_fill">ओटीपी स्वतः भरें</string>
+    <string name="otp_copy">ओटीपी कॉपी करें</string>
+    <string name="otp_listen">ओटीपी सुनें</string>
+    <string name="otp_invalid_code">अमान्य ओटीपी कोड। कृपया अपने मोबाइल पर भेजा गया 6 अंकों का कोड दर्ज करें।</string>
+    <string name="otp_invalid_phone">कृपया एक मान्य 10 अंकों का मोबाइल नंबर दर्ज करें।</string>
+    <string name="otp_security_note">आपकी सुरक्षा के लिए हम कभी आपसे यह कोड पढ़ने या साझा करने को नहीं कहेंगे।</string>
+    <string name="otp_received_dispatches_title">प्राप्त इनबॉक्स और अलर्ट (लाइव)</string>
+    <string name="action_change_number">नंबर बदलें</string>
+
+    <!-- Spoken to the user by the text-to-speech engine. -->
+    <string name="otp_spoken_message">आपका 6 अंकों का सत्यापन कोड है %1$s। यह 5 मिनट के लिए मान्य है।</string>
+
+    <!-- ===== Development-only demo OTP ===== -->
+    <string name="demo_otp_badge">डेमो मोड — ओटीपी</string>
+    <string name="demo_otp_label">आपका डेमो ओटीपी है:</string>
+    <string name="demo_otp_autofill">ओटीपी स्वतः भरें (%1$s)</string>
+    <string name="demo_otp_body">साइन इन करने के लिए यह डेमो ओटीपी दर्ज करें। कोई एसएमएस नहीं भेजा गया।</string>
+    <string name="demo_otp_dev_note">केवल विकास के लिए ओटीपी प्रवाह: कोड जनरेट करके परीक्षण के लिए डिवाइस पर दिखाया जाता है। कोई एसएमएस नहीं भेजा जाता। यह प्रवाह प्रोडक्शन में इस्तेमाल नहीं होना चाहिए।</string>
+
+    <!-- ===== Auth outcomes shown to the user ===== -->
+    <string name="auth_access_granted">प्रमाणीकरण की पुष्टि हो गई। %1$s पोर्टल की पहुँच दी गई।</string>
+    <string name="error_role_denied_account">पहुँच अस्वीकृत: यह खाता %1$s के रूप में पंजीकृत है। आप %2$s पोर्टल में लॉगिन नहीं कर सकते।</string>
+    <string name="error_role_denied_assigned">पहुँच अस्वीकृत: यह खाता %1$s के रूप में पंजीकृत है। आप केवल %1$s पोर्टल से ही लॉगिन कर सकते हैं।</string>
+    <string name="error_role_denied_session">पहुँच अस्वीकृत: लॉगिन सत्र %1$s के लिए शुरू किया गया था। आप %2$s पोर्टल में साइन इन पूरा नहीं कर सकते।</string>
+    <string name="error_role_denied_phone">पहुँच अस्वीकृत: मोबाइल नंबर +91 %1$s %2$s के रूप में पंजीकृत है। आप %3$s पोर्टल में लॉगिन नहीं कर सकते।</string>
+    <string name="error_no_profile">इस खाते को कोई प्रोफ़ाइल असाइन नहीं है। ऑनबोर्डिंग पूरी करने के लिए CPCB हेल्पडेस्क से संपर्क करें।</string>
+    <string name="error_no_role_assigned">इस खाते को कोई पहचानी गई भूमिका असाइन नहीं की गई है।</string>
+    <string name="error_password_too_short">पासवर्ड कम से कम 6 अक्षरों का होना चाहिए।</string>
+
+    <!-- ===== OTP delivery channels ===== -->
+    <string name="auth_tab_mobile">मोबाइल नंबर</string>
+    <string name="auth_tab_google_continue">Google से जारी रखें</string>
+    <string name="channel_all_title">सभी माध्यम (मोबाइल + ईमेल + Google)</string>
+    <string name="channel_all_subtitle">मोबाइल एसएमएस, ईमेल और Google खाते पर एक ही सत्यापन कोड एक साथ प्राप्त होता है</string>
+    <string name="channel_all_badge">अनुशंसित</string>
+    <string name="channel_mobile_title">पंजीकृत मोबाइल नंबर</string>
+    <string name="channel_mobile_subtitle">सीधे सेलुलर एसएमएस और Android पुश अलर्ट (+91)</string>
+    <string name="channel_mobile_badge">एसएमएस ओटीपी</string>
+    <string name="channel_email_title">पंजीकृत ईमेल</string>
+    <string name="channel_email_subtitle">आपके पंजीकृत इनबॉक्स पर आधिकारिक सत्यापन</string>
+    <string name="channel_email_badge">ईमेल ओटीपी</string>
+    <string name="channel_google_title">Google खाता</string>
+    <string name="channel_google_subtitle">आपके जुड़े हुए Google खाते / Gmail पर प्राप्त</string>
+    <string name="channel_google_badge">Google कोड</string>
+    <string name="status_active_verified">सक्रिय और सत्यापित</string>
+
+    <!-- ===== Account status ===== -->
+    <string name="status_pending_verification">पेंडिंग केवाईसी / पंजीकरण स्वीकृति</string>
+    <string name="status_rejected">अस्वीकृत / केवाईसी में गैर-अनुपालन</string>
+    <string name="status_suspended">निलंबित / अनुपालन ऑडिट चिह्नित</string>
+    <string name="status_disabled">प्रशासक द्वारा निष्क्रिय किया गया</string>
+
+    <!-- ===== Verification pipeline steps ===== -->
+    <string name="step_awaiting_credentials">विवरण की प्रतीक्षा है</string>
+    <string name="step_authenticating_user">उपयोगकर्ता विवरण प्रमाणित किया जा रहा है…</string>
+    <string name="step_verifying_account">खाता स्थिति और केवाईसी सत्यापित की जा रही है…</string>
+    <string name="step_verifying_role">वैधानिक भूमिका प्राधिकरण सत्यापित किया जा रहा है…</string>
+    <string name="step_verifying_permissions">भूमिका अनुमतियां और अनुपालन जांचा जा रहा है…</string>
+    <string name="step_login_success">लॉगिन सफल: पहुँच स्वीकृत</string>
+    <string name="step_authentication_failed">प्रमाणीकरण विफल</string>
+
+    <!-- ===== Error messages ===== -->
+    <string name="err_provider_not_configured">प्रमाणीकरण प्रदाता कॉन्फ़िगर नहीं है। कृपया प्रशासक से संपर्क करें।</string>
+    <string name="err_network">प्रमाणीकरण सर्वर तक नहीं पहुंच सका। अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें।</string>
+    <string name="err_invalid_otp">सत्यापन कोड अमान्य है या समाप्त हो चुका है। कृपया नया कोड मंगाएं।</string>
+    <string name="err_otp_not_requested">कोई सक्रिय सत्यापन कोड नहीं है। कृपया पहले ओटीपी मंगाएं।</string>
+    <string name="err_invalid_credentials">ईमेल या पासवर्ड अमान्य है। कृपया अपना ईमेल और पासवर्ड जांचें।</string>
+    <string name="err_email_not_confirmed">यह ईमेल पंजीकृत है लेकिन अभी पुष्टि नहीं हुई है।</string>
+    <string name="err_account_not_found">इन विवरणों से कोई खाता पंजीकृत नहीं है।</string>
+    <string name="err_account_gated">आपका खाता अभी सक्रिय नहीं है।</string>
+    <string name="err_role_mismatch">यह खाता किसी अलग भूमिका के अंतर्गत पंजीकृत है।</string>
+    <string name="err_role_not_assigned">इस खाते को कोई भूमिका असाइन नहीं की गई है।</string>
+    <string name="err_email_registered">इस ईमेल से एक खाता पहले से मौजूद है।</string>
+    <string name="err_generic">प्रमाणीकरण विफल रहा। कृपया पुनः प्रयास करें।</string>
+</resources>

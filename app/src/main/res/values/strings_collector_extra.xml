@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Sync / connectivity ===== -->
+    <string name="status_syncing">Syncing…</string>
+    <string name="sync_queued_count">%1$d Queued</string>
+    <string name="sync_no_pending_payouts">No pending payouts</string>
+    <string name="sync_changes_queued_cpcb">%1$d changes queued for CPCB sync</string>
+    <string name="sync_all_records_synced_cpcb">All records synced with CPCB</string>
+    <string name="sync_last_synced_at">Last synced at %1$s</string>
+    <string name="sync_never_synced">Not synced yet</string>
+    <string name="sync_now">Sync Now</string>
+    <string name="sync_offline_first_active">Offline-First active</string>
+    <string name="sync_records_stored_locally">Records stored locally</string>
+    <string name="sync_changes_queued_short">%1$d changes queued</string>
+    <string name="sync_all_records_synced">All records synced</string>
+    <string name="sync_db_syncing">CPCB Database Syncing…</string>
+    <string name="sync_db_offline">CPCB Database Offline</string>
+    <string name="sync_db_pending">CPCB Database Pending Sync</string>
+    <string name="sync_db_synced">CPCB Database Synced</string>
+    <string name="sync_switch_online">Switch Online to sync</string>
+    <string name="sync_syncing_cpcb">Syncing with CPCB…</string>
+    <string name="sync_queued_tap">%1$d changes queued — tap to sync</string>
+
+    <!-- ===== Stat cards ===== -->
+    <string name="stat_from_lots">From %1$d lots</string>
+    <string name="stat_cpcb_payout">Verified CPCB payout</string>
+    <string name="stat_payable_weigh_in">Payable on weigh-in</string>
+    <string name="stat_cpcb_payout_short">Verified CPCB Payout</string>
+
+    <!-- ===== Recycler cards ===== -->
+    <string name="recycler_top_rate">Top Rate: ₹%1$s/kg</string>
+    <string name="recycler_doorstep_pickup">Doorstep Pickup</string>
+    <string name="recycler_view_map">View Map</string>
+    <string name="recycler_call">Call Recycler</string>
+    <string name="recycler_live_map">Live Map</string>
+    <string name="recycler_rate_unavailable">Rate unavailable</string>
+    <string name="recycler_pickup_available">Pickup Available</string>
+    <string name="recycler_self_dropoff">Self Drop-off</string>
+    <string name="recycler_digital_receipt">Digital Receipt</string>
+    <string name="recycler_instant_cash">Instant Cash</string>
+    <string name="recycler_view_details">View Details</string>
+    <string name="recycler_offered_rate">Offered Rate</string>
+    <string name="recycler_view_handover">View Handover</string>
+    <string name="recycler_cpcb_spcb_note">CPCB / SPCB registered with guaranteed electronic weighing scales</string>
+    <string name="recycler_top_rate_short">Top rate</string>
+    <string name="recycler_all_materials">All materials</string>
+    <string name="recycler_no_matches">No verified recycler matches these filters. Clear a filter to see every authorized option.</string>
+    <string name="recycler_authorized_active">Authorized • Active</string>
+    <string name="recycler_rates_live">Offered rates (live)</string>
+    <string name="recycler_top_rate_offered">Top rate offered • %1$s</string>
+
+    <!-- ===== Empty states ===== -->
+    <string name="empty_no_lot_matches">No lots match the selected filters</string>
+    <string name="empty_no_lots_yet">No Digital Lots Created Yet</string>
+    <string name="empty_clear_or_scan">Clear filters or scan new e-waste</string>
+    <string name="empty_tap_scan">Tap \'Scan E-Waste\' to photograph and valuate materials</string>
+    <string name="empty_tap_create">Tap \'Create Lot\' to photograph and valuate materials</string>
+
+    <!-- ===== Header / navigation ===== -->
+    <string name="header_e_waste_collector">E-Waste Collector</string>
+    <string name="header_cpcb_verified_collector">CPCB Verified Collector</string>
+    <string name="header_view_all_lots">View all digital lots</string>
+    <string name="header_scan_e_waste">Scan E-Waste</string>
+    <string name="header_create_new_lot">Create a new digital lot</string>
+    <string name="header_safety_guidelines">Safety Guidelines</string>
+    <string name="header_safety_subtitle">Hazardous e-waste handling safety</string>
+
+    <!-- ===== Location sharing ===== -->
+    <string name="location_sharing_on">Location sharing ON</string>
+    <string name="location_sharing_off">Location sharing OFF</string>
+    <string name="location_visibility_note">Visible to nearby e-waste collectors only (no address / phone)</string>
+    <string name="location_aggregators_optimise">Aggregators optimise pickup routes automatically</string>
+    <string name="location_km_away">%1$.1f km away</string>
+    <string name="location_ledger_proof">Documented proof of transaction for bank credit and formal identity</string>
+
+    <!-- ===== Lot status chips ===== -->
+    <string name="lot_paid_in_cash">PAID IN CASH</string>
+    <string name="lot_handover_pending">HANDOVER PENDING</string>
+</resources>

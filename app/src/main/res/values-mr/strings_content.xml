@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trend_up">वाढत आहे</string>
+    <string name="trend_down">घसत आहे</string>
+    <string name="trend_stable">स्थिर</string>
+
+    <string name="alert_critical">अत्यंत गंभीर</string>
+    <string name="alert_high">उच्च</string>
+    <string name="alert_medium">मध्यम</string>
+    <string name="alert_low">कमी</string>
+
+    <string name="payment_cash">हस्तांतरणाच्या वेळी तातडीचा रोख</string>
+    <string name="payment_upi">थेट UPI हस्तांतरण</string>
+    <string name="payment_bank">थेट बँक जमा</string>
+
+    <string name="request_pending">प्रलंबित</string>
+    <string name="request_accepted">स्वीकृत</string>
+    <string name="request_rejected">नकारलेले</string>
+    <string name="request_blocked">अडवणी</string>
+    <string name="request_reported">तक्रार केली</string>
+
+    <string name="quotation_pending">प्रलंबित</string>
+    <string name="quotation_sent">पाठवलेले</string>
+    <string name="quotation_accepted">स्वीकृत</string>
+    <string name="quotation_rejected">नकारलेले</string>
+    <string name="quotation_expired">मुदत संपली</string>
+    <string name="quotation_withdrawn">मागे घेतलेले</string>
+
+    <string name="authz_active">अधिकृत आणि सक्रिय</string>
+    <string name="authz_pending">प्राधिकरण प्रलंबित</string>
+    <string name="authz_expired">प्राधिकरण मुदत संपले</string>
+    <string name="authz_suspended">प्राधिकरण स्थगित</string>
+
+    <string name="upload_pending">अपलोड प्रलंबित</string>
+    <string name="upload_complete">अपलोड पूर्ण</string>
+    <string name="upload_failed">अपलोड अयशस्वी</string>
+
+    <string name="relative_just_now">आत्ताच</string>
+    <string name="relative_minutes_ago">%1$d मिनिटांपूर्वी</string>
+    <string name="relative_hours_ago">%1$d तासांपूर्वी</string>
+    <string name="relative_days_ago">%1$d दिवसांपूर्वी</string>
+    <string name="relative_today">आज</string>
+    <string name="relative_yesterday">काल</string>
+</resources>

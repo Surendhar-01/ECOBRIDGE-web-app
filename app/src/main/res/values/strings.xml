@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ECOBRIDGES</string>
+
+    <!-- Language names: shown in their own script, so never translated. -->
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_english_name" translatable="false">English</string>
+    <string name="language_hindi" translatable="false">हिन्दी</string>
+    <string name="language_hindi_name" translatable="false">Hindi</string>
+    <string name="language_marathi" translatable="false">मराठी</string>
+    <string name="language_marathi_name" translatable="false">Marathi</string>
+
+    <!-- Shared actions -->
+    <string name="action_change_language">Change language</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
+    <string name="action_back">Back</string>
+    <string name="action_retry">Try again</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="action_save">Save</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_ok">OK</string>
+    <string name="action_allow_microphone">Allow microphone</string>
+    <string name="action_listen">Listen</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_execute">Execute</string>
+
+    <!-- Shared accessibility labels -->
+    <string name="cd_app_logo">ECO BRIDGES logo</string>
+    <string name="cd_selected">Selected</string>
+    <string name="cd_read_aloud">Read aloud</string>
+    <string name="cd_continue">Continue</string>
+    <string name="cd_offline">Offline</string>
+    <string name="cd_voice_microphone">Voice microphone</string>
+
+    <!-- Units and formats -->
+    <string name="unit_kg">kg</string>
+    <string name="unit_rupees">₹%1$s</string>
+    <string name="format_kg_value">%1$s kg</string>
+</resources>

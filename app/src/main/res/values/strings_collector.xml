@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Collector hub header ===== -->
+    <string name="collector_e_waste_collector_hub">E-Waste Collector Hub</string>
+    <string name="collector_collect_segregate_recycle">Collect • Segregate • Recycle</string>
+    <string name="collector_notifications">Notifications</string>
+
+    <!-- ===== Stat cards ===== -->
+    <string name="collector_today_s_earnings">Today\'s Earnings</string>
+    <string name="collector_this_month">This Month</string>
+    <string name="collector_pending_handover">Pending Handover</string>
+    <string name="collector_total_cash_settled">Total Cash Settled</string>
+
+    <!-- ===== Recycler sections ===== -->
+    <string name="collector_authorized_formal_recyclers">Authorized Formal Recyclers</string>
+    <string name="collector_cpcb_certified_partners_with_ratings_and_certifi">CPCB certified partners with ratings &amp; certified weighment</string>
+    <string name="collector_scan_e_waste">Scan E-Waste</string>
+    <string name="collector_ai_camera_valuation_create_a_digital_lot">AI camera valuation • create a digital lot</string>
+    <string name="collector_ai_camera_valuation">AI camera valuation</string>
+    <string name="collector_nearby_recyclers">Nearby Recyclers</string>
+    <string name="collector_find_authorized_recyclers_near_your_location">Find authorized recyclers near your location</string>
+    <string name="collector_view_all">View All</string>
+    <string name="collector_rate_outside_market_range_verify_before_handover">Rate outside market range — verify before handover</string>
+    <string name="collector_authorized_recyclers_and_aggregators">Authorized Recyclers &amp; Aggregators</string>
+    <string name="collector_view_collection_points_on_live_map">View Collection Points on Live Map</string>
+
+    <!-- ===== Lot list and filters ===== -->
+    <string name="collector_filter_lots">Filter Lots</string>
+    <string name="collector_active_and_completed_digital_lots">Active &amp; Completed Digital Lots</string>
+    <string name="collector_date_newest">Date (Newest)</string>
+    <string name="collector_date_oldest">Date (Oldest)</string>
+    <string name="collector_all_status">All Status</string>
+    <string name="collector_all_categories">All Categories</string>
+    <string name="collector_clear">Clear</string>
+    <string name="collector_create_lot">Create Lot</string>
+    <string name="collector_log_a_new_e_waste_lot">Log a new e-waste lot</string>
+    <string name="collector_usable_financial_ledger_and_receipts">Usable Financial Ledger &amp; Receipts</string>
+
+    <!-- ===== AI assistant ===== -->
+    <string name="collector_ask_ai_e_waste_assistant">Ask AI E-Waste Assistant</string>
+    <string name="collector_voice_queries_on_disposal_prices_and_cpcb_rules">Voice queries on disposal, prices &amp; CPCB rules</string>
+
+    <!-- ===== Location sharing ===== -->
+    <string name="collector_share_my_location">Share My Location</string>
+    <string name="collector_never_shared_yet">Never shared yet</string>
+    <string name="collector_nearby_collectors_50_km">Nearby Collectors (50 km)</string>
+    <string name="collector_no_other_collectors_sharing_right_now">No other collectors sharing right now</string>
+    <string name="collector_enable_location_sharing_to_see_the_network">Enable location sharing to see the network</string>
+    <string name="collector_nearby_collector">Nearby collector</string>
+    <string name="collector_connections_and_quotations">Connections &amp; Quotations</string>
+    <string name="collector_no_live_requests_reach_out_to_a_recycler_below">No live requests. Reach out to a recycler below.</string>
+    <string name="collector_reach_a_recycler">Reach a Recycler</string>
+
+    <!-- ===== Price board ===== -->
+    <string name="price_government_and_recycler_price_board">Government &amp; Recycler Price Board</string>
+    <string name="price_fair_market_rates_benchmarked_to_cpcb_epr_2022_r">Fair market rates benchmarked to CPCB EPR 2022 rules</string>
+    <string name="price_all_materials">All Materials</string>
+    <string name="price_authorized_buying_rate">Authorized Buying Rate</string>
+    <string name="price_authorized_rate_last_8_weeks_kg">Authorized rate • last 8 weeks (₹/kg)</string>
+    <string name="price_create_lot_for_this_material">Create Lot for this Material</string>
+
+    <!-- ===== Pictorial safety ===== -->
+    <string name="safety_hazardous_waste_safety">Hazardous Waste Safety</string>
+    <string name="safety_don_t_burn_or_leach_tap_icons_for_audio">Don\'t Burn or Leach • Tap icons for audio</string>
+    <string name="safety_open_full_visual_safety_and_economics_manual">Open Full Visual Safety &amp; Economics Manual</string>
+    <string name="safety_do_not_do">DO NOT DO</string>
+    <string name="safety_audio">AUDIO</string>
+
+    <!-- ===== Offline sync indicator ===== -->
+    <string name="offline_syncing_with_cloud">Syncing with Cloud…</string>
+    <string name="offline_offline_storage_active">Offline Storage Active</string>
+    <string name="offline_unsyncedcount_lots_queued_offline">%1$d Lots Queued Offline</string>
+    <string name="offline_cpcb_database_synced">CPCB Database Synced</string>
+    <string name="offline_saved_locally_in_sqlite_will_sync_on_reconnect">Saved locally in SQLite. Will sync on reconnect.</string>
+    <string name="offline_last_synced_at_lastsyncstr_offline_first_active">Last synced at %1$s • Offline-First active</string>
+    <string name="offline_network_connectivity_mode">Network Connectivity Mode</string>
+
+    <!-- ===== Unit economics ===== -->
+    <string name="econ_economic_assessment_why_you_earn_more">Economic Assessment: Why You Earn More</string>
+    <string name="econ_informal_middlemen_only_pay_for_copper_and_burn_">Informal middlemen only pay for copper and burn the rest. Authorized recyclers extract Gold, Palladium, Lithium, &amp; Neodymium, passing 25%% to 58%% higher cash payout directly to you.</string>
+
+    <!-- ===== Safety guidance section ===== -->
+    <string name="safetyguide_pictorial_and_audio_safety_guidance">Pictorial &amp; Audio Safety Guidance</string>
+    <string name="safetyguide_backyard_processing_destroys_80_of_precious_meta">Backyard processing destroys 80%% of precious metals and poisons your lungs.</string>
+</resources>

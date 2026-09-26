@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_ai_e_waste_visual_scanner">AI E-Waste Visual Scanner</string>
+    <string name="scan_point_camera_at_circuit_board_battery_phone_or_w">Point camera at circuit board, battery, phone or wires</string>
+    <string name="scan_scanresults_count_it_ishazardous_scanned_item_s_">${scanResults.count { it.isHazardous }} scanned item(s) contain hazardous materials. Follow the disposal steps below or on each card.</string>
+</resources>

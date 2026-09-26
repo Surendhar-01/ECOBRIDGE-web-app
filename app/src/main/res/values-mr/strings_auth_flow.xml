@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Portal subtitles ===== -->
+    <string name="auth_portal_aggregator_gateway">सीपीसीबी / पर्यावरण मंत्रालय नोंदणीकृत एग्रीगेटर गेटवे</string>
+    <string name="auth_portal_treatment_facility">नियम १३ अधिकृत उपचार आणि पुनर्चक्रण सुविधा</string>
+    <string name="auth_portal_epr_oversight">पर्यावरण मंत्रालय EPR नियामक आणि वैधानिक देखरेख पोर्टल</string>
+
+    <!-- ===== Form validation ===== -->
+    <string name="err_valid_mobile">कृपया वैध १० अंकी मोबाईल नंबर टाका.</string>
+    <string name="err_otp_incomplete">कृपया संपूर्ण ६ अंकी पडताळणी कोड टाका.</string>
+    <string name="err_valid_email">कृपया वैध नोंदणीकृत ईमेल पत्ता टाका.</string>
+    <string name="err_password_min_short">पासवर्ड किमान ६ अक्षरांचा असावा.</string>
+    <string name="err_full_name_required">कृपया तुमचे पूर्ण नाव टाका.</string>
+    <string name="err_password_mismatch">पासवर्ड जुळत नाहीत.</string>
+    <string name="err_facility_required">कृपया तुमच्या सुविधेचे नाव आणि सीपीसीबी प्राधिकरण क्रमांक टाका.</string>
+    <string name="err_department_required">कृपया तुमचा विभाग / कर्मचारी आयडी टाका.</string>
+    <string name="err_signin_before_otp">कृपया आधी तुमच्या नोंदणीकृत ईमेल आणि पासवर्डने साइन इन करा. पडताळणी कोड त्यानंतर दिला जातो.</string>
+    <string name="err_google_not_configured">Google साइन-इन अद्याप कॉन्फिगर केलेला नाही. प्रोजेक्टच्या .env फाइलमध्ये GOOGLE_WEB_CLIENT_ID जोडा.</string>
+    <string name="err_authorization_failed">वैधानिक प्राधिकरण अयशस्वी झाले.</string>
+    <string name="err_registration_failed">नोंदणी अयशस्वी झाली.</string>
+    <string name="err_authentication_failed">प्रमाणीकरण अयशस्वी झाले.</string>
+    <string name="err_verification_failed">पडताळणी अयशस्वी झाली.</string>
+
+    <!-- ===== Inline status messages ===== -->
+    <string name="msg_demo_otp_auto">डेमो मोड — एक यादृच्छिक ६ अंकी डेमो ओटीपी तयार केला आहे आणि खाली दाखवला आहे. तुम्हाला आपोआप साइन इन केले जात आहे.</string>
+    <string name="msg_otp_on_screen">डेमो मोड. तुमचा ओ टी पी स्क्रीनवर दाखवला आहे. तुम्हाला आपोआप साइन इन केले जात आहे.</string>
+    <string name="msg_code_sent_sms">+91 %1$s वर एसएमएसद्वारे पडताळणी कोड पाठवला गेला.</string>
+    <string name="msg_otp_sms_prompt">तुमच्या मोबाईलवर एसएमएसने पडताळणी कोड पाठवला आहे. पुढे जाण्यासाठी तो टाका.</string>
+    <string name="msg_code_send_failed">पडताळणी कोड पाठवता आला नाही.</string>
+    <string name="msg_verified_granted">यशस्वीरित्या पडताळले! प्रवेश मंजूर.</string>
+    <string name="msg_demo_otp_new_auto">नवीन डेमो ओटीपी तयार करून खाली दाखवला आहे. तुम्हाला आपोआप साइन इन केले जात आहे.</string>
+    <string name="msg_code_resent">नवीन पडताळणी कोड पाठवला गेला आहे.</string>
+    <string name="msg_resend_failed">कोड पुन्हा पाठवता आला नाही.</string>
+    <string name="msg_credentials_verified">ओळखपत्रे तपासली. पुढे जाण्यासाठी ओटीपी टाका.</string>
+    <string name="msg_credentials_demo">ओळखपत्रे स्वीकृत. तुमचा पडताळणी कोड स्क्रीनवर दाखवला आहे. पुढे जाण्यासाठी तो टाका.</string>
+    <string name="msg_account_created">खाते तयार झाले. आता साइन इन करा.</string>
+    <string name="msg_account_created_full">खाते यशस्वीरित्या तयार झाले. कृपया तुमच्या नोंदणीकृत ईमेल आणि पासवर्डने साइन इन करा.</string>
+    <string name="msg_google_granted">Google प्रमाणीकरण तपासले. प्रवेश मंजूर.</string>
+    <string name="msg_google_cancelled">Google साइन-इन रद्द करण्यात आले.</string>
+    <string name="msg_google_failed">Google साइन-इन अयशस्वी झाले.</string>
+
+    <!-- Spoken to the user by the text-to-speech engine. -->
+    <string name="voice_otp_security_note">कृपया स्क्रीनवर दाखवलेला ६ अंकी कोड टाका. तुमच्या सुरक्षेसाठी मी तो मोठ्याने वाचणार नाही.</string>
+    <string name="voice_admin_registration">प्रशासक खाती केंद्रीय सीपीसीबीकडून तयार केली जातात. येथील नोंदणी संचक आणि पुनर्क्रियाकारांसाठी आहे.</string>
+    <string name="voice_opening_registration">नोंदणी सुरू होत आहे. कृपया खाते तयार करण्यासाठी तुमचा तपशील भरा.</string>
+
+    <!-- ===== Labels and progress states ===== -->
+    <string name="field_mobile_short">मोबाईल नंबर</string>
+    <string name="field_optional_suffix">%1$s (ऐच्छिक)</string>
+    <string name="field_operating_area">कार्यक्षेत्र / परिसर</string>
+    <string name="field_facility_name">सुविधा / संस्थेचे नाव</string>
+    <string name="field_cpcb_number">सीपीसीबी प्राधिकरण क्रमांक</string>
+    <string name="field_department_id">विभाग / कर्मचारी आयडी</string>
+    <string name="action_return_to_role_selection">भूमिका निवडीकडे परत जा</string>
+    <string name="action_creating_account">खाते तयार केले जात आहे…</string>
+    <string name="action_create_account">खाते तयार करा</string>
+    <string name="action_sign_in_email">ईमेलने साइन इन करा</string>
+    <string name="action_authenticating_google">Google सह प्रमाणित केले जात आहे…</string>
+    <string name="action_continue_google_account">Google खात्याने पुढे जा</string>
+    <string name="status_generating_demo_otp">डेमो ओटीपी तयार केले जात आहे…</string>
+    <string name="status_sending_code">कोड पाठवला जात आहे…</string>
+    <string name="status_demo_mode_explain">डेमो मोड — एक यादृच्छिक ६ अंकी डेमो ओटीपी येथे तयार करून दाखवला जाईल. कोणताही एसएमएस पाठवला जात नाही.</string>
+    <string name="status_sms_explain">६ अंकी पडताळणी कोड एसएमएसद्वारे तुमच्या मोबाईलवर पाठवला जाईल.</string>
+    <string name="status_verification_failed">पडताळणी अयशस्वी</string>
+</resources>

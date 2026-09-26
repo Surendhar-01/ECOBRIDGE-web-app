@@ -1,0 +1,5 @@
+const fs = require('fs')
+const t = fs.readFileSync('app/src/main/java/com/example/model/EwasteModels.kt', 'utf8').split('\n')
+console.log(t.slice(0, 30).map((l, i) => String(i + 1).padStart(3) + ': ' + l).join('\n'))
+console.log('...')
+console.log(t.slice(86, 120).map((l, i) => String(i + 87).padStart(3) + ': ' + l).join('\n'))

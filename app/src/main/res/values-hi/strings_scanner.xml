@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_ai_e_waste_visual_scanner">AI ई-कचरा स्कैनर</string>
+    <string name="scan_point_camera_at_circuit_board_battery_phone_or_w">कैमरे को ई-कचरे (सर्किट, बैटरी, फोन) के सामने रखें</string>
+    <string name="scan_scanresults_count_it_ishazardous_scanned_item_s_">स्कैन की गई ${scanResults.count { it.isHazardous }} वस्तुओं में खतरनाक पदार्थ हैं। नीचे दिए गए निस्तारण चरणों का पालन करें।</string>
+</resources>

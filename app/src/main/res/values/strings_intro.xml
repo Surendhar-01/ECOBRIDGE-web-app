@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Intro / role chooser ===== -->
+    <string name="intro_portal_subtitle">India Clean Eco Portal</string>
+    <string name="intro_welcome_title">Welcome</string>
+    <string name="intro_welcome_subtitle">Choose how you want to continue.</string>
+    <string name="intro_footer_legal">E-Waste (Management) Rules, Government of India • Voice AI v1.0</string>
+    <string name="intro_ambiguous_voice">I didn\'t understand which role you want. Please say collector, recycler, or government.</string>
+    <string name="offline_warning">Internet connection is unavailable. Some voice features may not work.</string>
+
+    <!-- ===== Roles ===== -->
+    <string name="role_collector_title">Informal Collector</string>
+    <string name="role_collector_description">Scrap collection &amp; aggregation</string>
+    <string name="role_collector_voice">This option is for scrap collectors and aggregators.</string>
+    <string name="role_recycler_title">Formal Recycler</string>
+    <string name="role_recycler_description">Authorized Recycling Center</string>
+    <string name="role_recycler_voice">This option is for authorized recycling centers and processing facilities.</string>
+    <string name="role_admin_title">Government Admin</string>
+    <string name="role_admin_description">Government Monitoring</string>
+    <string name="role_admin_voice">This option is for government officials and environmental monitoring.</string>
+    <string name="role_confirm_question">Continue as %1$s?</string>
+
+    <!-- ===== Voice assistant ===== -->
+    <string name="voice_speak_prompt">Speak to continue</string>
+    <string name="voice_question">What do you want to do?</string>
+    <string name="voice_mic_tap_prompt">Tap to speak</string>
+    <string name="voice_state_listening">Listening…</string>
+    <string name="voice_state_understanding">Understanding…</string>
+    <string name="voice_state_speaking">Speaking…</string>
+    <string name="voice_need_help">Need help?</string>
+    <string name="voice_help_button">Voice Help</string>
+    <string name="voice_help_audio_hint">Tap for audio explanation</string>
+    <string name="voice_help_explanation">This application has three sections: Informal Collector, Formal Recycler and Government Admin. Choose the option that matches your role.</string>
+    <string name="voice_intro_explanation">Welcome to E-Waste Management. Tap the microphone to speak, or select your role: Informal Collector, Formal Recycler, or Government Admin.</string>
+    <string name="voice_command_title">Voice Command</string>
+    <string name="voice_command_help">Say or type what to open (for example \"open informal collector\", \"other login\", or \"open recycler\"):</string>
+    <string name="voice_command_placeholder">e.g. open informal collector</string>
+    <string name="voice_command_quick_options">Quick options:</string>
+    <string name="voice_command_collector">Collector</string>
+    <string name="voice_command_recycler">Recycler</string>
+    <string name="voice_command_admin">Admin</string>
+    <string name="voice_command_other">Other</string>
+
+    <!-- ===== Settings sheet ===== -->
+    <string name="settings_app_language">App language</string>
+    <string name="settings_voice_title">Voice Settings</string>
+    <string name="settings_voice_guidance">Voice Guidance</string>
+    <string name="settings_voice_guidance_hint">Read prompts automatically</string>
+    <string name="settings_speech_speed">Speech Speed</string>
+    <string name="settings_speed_slow">Slow</string>
+    <string name="settings_speed_normal">Normal</string>
+    <string name="settings_mute">Mute Audio</string>
+    <string name="settings_mute_hint">Silence all spoken voice responses</string>
+
+    <!-- ===== Microphone permission ===== -->
+    <string name="mic_permission_title">Microphone permission is needed for voice input.</string>
+    <string name="mic_permission_body">Allow microphone access to enable voice role selection and spoken navigation in your language.</string>
+
+    <!-- ===== Confirmation buttons ===== -->
+    <string name="action_yes_continue">Yes, Continue</string>
+    <string name="action_no_change">No, Change</string>
+</resources>

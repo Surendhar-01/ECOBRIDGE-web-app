@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Intro / role chooser ===== -->
+    <string name="intro_portal_subtitle">भारत स्वच्छ इको पोर्टल</string>
+    <string name="intro_welcome_title">स्वागत है</string>
+    <string name="intro_welcome_subtitle">आगे बढ़ने का विकल्प चुनें।</string>
+    <string name="intro_footer_legal">ई-कचरा (प्रबंधन) नियम, भारत सरकार • वॉयस एआई v1.0</string>
+    <string name="intro_ambiguous_voice">मुझे समझ नहीं आया कि आप कौन सा विकल्प चाहते हैं। कृपया कलेक्टर, रीसायकलर या सरकारी कहें।</string>
+    <string name="offline_warning">इंटरनेट कनेक्शन उपलब्ध नहीं है। कुछ वॉयस सुविधाएं काम नहीं कर सकती हैं।</string>
+
+    <!-- ===== Roles ===== -->
+    <string name="role_collector_title">अनौपचारिक कलेक्टर</string>
+    <string name="role_collector_description">स्क्रैप संग्रह और एकत्रीकरण</string>
+    <string name="role_collector_voice">यह विकल्प स्क्रैप कलेक्टर और एग्रीगेटर के लिए है।</string>
+    <string name="role_recycler_title">अधिकृत रीसायकलर</string>
+    <string name="role_recycler_description">अधिकृत रीसायकलिंग केंद्र</string>
+    <string name="role_recycler_voice">यह विकल्प अधिकृत रीसायकलिंग केंद्रों और प्रसंस्करण सुविधाओं के लिए है।</string>
+    <string name="role_admin_title">सरकारी प्रशासन</string>
+    <string name="role_admin_description">सरकारी निगरानी</string>
+    <string name="role_admin_voice">यह विकल्प सरकारी प्रशासन और पर्यावरण निगरानी के लिए है।</string>
+    <string name="role_confirm_question">%1$s के रूप में आगे बढ़ें?</string>
+
+    <!-- ===== Voice assistant ===== -->
+    <string name="voice_speak_prompt">बोलकर बताएं</string>
+    <string name="voice_question">आप क्या करना चाहते हैं?</string>
+    <string name="voice_mic_tap_prompt">बोलने के लिए टैप करें</string>
+    <string name="voice_state_listening">सुन रहा हूँ…</string>
+    <string name="voice_state_understanding">समझ रहा हूँ…</string>
+    <string name="voice_state_speaking">बोल रहा हूँ…</string>
+    <string name="voice_need_help">मदद चाहिए?</string>
+    <string name="voice_help_button">आवाज़ से मदद</string>
+    <string name="voice_help_audio_hint">ऑडियो विवरण के लिए टैप करें</string>
+    <string name="voice_help_explanation">इस एप्लिकेशन में तीन भाग हैं: अनौपचारिक कलेक्टर, अधिकृत रीसायकलर और सरकारी प्रशासन। अपनी भूमिका से मेल खाने वाला विकल्प चुनें।</string>
+    <string name="voice_intro_explanation">ई-कचरा प्रबंधन में आपका स्वागत है। बोलने के लिए माइक्रोफ़ोन टैप करें, या अपनी भूमिका चुनें: अनौपचारिक कलेक्टर, अधिकृत रीसायकलर, या सरकारी प्रशासन।</string>
+    <string name="voice_command_title">वॉयस कमांड</string>
+    <string name="voice_command_help">क्या खोलना है बोलें या लिखें (जैसे \"कलेक्टर लॉगिन खोलो\", \"अन्य लॉगिन\"):</string>
+    <string name="voice_command_placeholder">जैसे: कलेक्टर लॉगिन खोलो</string>
+    <string name="voice_command_quick_options">त्वरित विकल्प:</string>
+    <string name="voice_command_collector">कलेक्टर</string>
+    <string name="voice_command_recycler">रीसायकलर</string>
+    <string name="voice_command_admin">प्रशासन</string>
+    <string name="voice_command_other">अन्य</string>
+
+    <!-- ===== Settings sheet ===== -->
+    <string name="settings_app_language">ऐप की भाषा</string>
+    <string name="settings_voice_title">वॉयस सेटिंग्स</string>
+    <string name="settings_voice_guidance">वॉयस मार्गदर्शन</string>
+    <string name="settings_voice_guidance_hint">संकेत स्वतः पढ़ें</string>
+    <string name="settings_speech_speed">बोलने की गति</string>
+    <string name="settings_speed_slow">धीमी</string>
+    <string name="settings_speed_normal">सामान्य</string>
+    <string name="settings_mute">ऑडियो म्यूट</string>
+    <string name="settings_mute_hint">सभी बोली जाने वाले उत्तर मौन रखें</string>
+
+    <!-- ===== Microphone permission ===== -->
+    <string name="mic_permission_title">आवाज़ इनपुट के लिए माइक्रोफ़ोन अनुमति आवश्यक है।</string>
+    <string name="mic_permission_body">अपनी भाषा में बोलकर भूमिका चुनने और वॉयस सहायता के लिए माइक्रोफ़ोन की अनुमति दें।</string>
+
+    <!-- ===== Confirmation buttons ===== -->
+    <string name="action_yes_continue">हाँ, आगे बढ़ें</string>
+    <string name="action_no_change">नहीं, बदलें</string>
+</resources>

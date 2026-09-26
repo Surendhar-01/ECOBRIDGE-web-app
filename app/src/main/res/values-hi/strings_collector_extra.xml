@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Sync / connectivity ===== -->
+    <string name="status_syncing">सिंक हो रहा है…</string>
+    <string name="sync_queued_count">%1$d लंबित</string>
+    <string name="sync_no_pending_payouts">कोई बकाया भुगतान नहीं</string>
+    <string name="sync_changes_queued_cpcb">CPCB सिंक के लिए %1$d बदलाव लंबित</string>
+    <string name="sync_all_records_synced_cpcb">सभी रिकॉर्ड CPCB के साथ सिंक हैं</string>
+    <string name="sync_last_synced_at">अंतिम सिंक %1$s</string>
+    <string name="sync_never_synced">अभी तक सिंक नहीं हुआ</string>
+    <string name="sync_now">अभी सिंक करें</string>
+    <string name="sync_offline_first_active">ऑफलाइन-फर्स्ट सक्रिय</string>
+    <string name="sync_records_stored_locally">रिकॉर्ड स्थानीय रूप से सहेजे गए</string>
+    <string name="sync_changes_queued_short">%1$d बदलाव लंबित</string>
+    <string name="sync_all_records_synced">सभी रिकॉर्ड सिंक हैं</string>
+    <string name="sync_db_syncing">CPCB डेटाबेस सिंक हो रहा है…</string>
+    <string name="sync_db_offline">CPCB डेटाबेस ऑफलाइन</string>
+    <string name="sync_db_pending">CPCB डेटाबेस सिंक लंबित</string>
+    <string name="sync_db_synced">CPCB डेटाबेस सिंक हो गया</string>
+    <string name="sync_switch_online">सिंक करने के लिए ऑनलाइन करें</string>
+    <string name="sync_syncing_cpcb">CPCB के साथ सिंक हो रहा है…</string>
+    <string name="sync_queued_tap">%1$d बदलाव लंबित — सिंक करने के लिए टैप करें</string>
+
+    <!-- ===== Stat cards ===== -->
+    <string name="stat_from_lots">%1$d लॉट से</string>
+    <string name="stat_cpcb_payout">सत्यापित CPCB भुगतान</string>
+    <string name="stat_payable_weigh_in">तौलते समय देय</string>
+    <string name="stat_cpcb_payout_short">सत्यापित CPCB भुगतान</string>
+
+    <!-- ===== Recycler cards ===== -->
+    <string name="recycler_top_rate">शीर्ष दर: ₹%1$s/कि.ग्रा.</string>
+    <string name="recycler_doorstep_pickup">घर तक पिकअप</string>
+    <string name="recycler_view_map">नक्शा देखें</string>
+    <string name="recycler_call">रीसायकलर को कॉल करें</string>
+    <string name="recycler_live_map">लाइव मैप</string>
+    <string name="recycler_rate_unavailable">दर उपलब्ध नहीं</string>
+    <string name="recycler_pickup_available">पिकअप उपलब्ध</string>
+    <string name="recycler_self_dropoff">स्वयं ड्रॉप-ऑफ़</string>
+    <string name="recycler_digital_receipt">डिजिटल रसीद</string>
+    <string name="recycler_instant_cash">तुरंत नकद</string>
+    <string name="recycler_view_details">विवरण देखें</string>
+    <string name="recycler_offered_rate">ऑफ़र की गई दर</string>
+    <string name="recycler_view_handover">हस्तांतरण देखें</string>
+    <string name="recycler_cpcb_spcb_note">CPCB / SPCB पंजीकृत, गारंटीशीरा इलेक्ट्रॉनिक तौल कांटों के साथ</string>
+    <string name="recycler_top_rate_short">शीर्ष दर</string>
+    <string name="recycler_all_materials">सभी सामग्री</string>
+    <string name="recycler_no_matches">इन फ़िल्टर से कोई सत्यापित रीसायकलर मेल नहीं खाता। सभी अधिकृत विकल्प देखने के लिए कोई एक फ़िल्टर हटाएं।</string>
+    <string name="recycler_authorized_active">अधिकृत • सक्रिय</string>
+    <string name="recycler_rates_live">ऑफ़र की गई दरें (लाइव)</string>
+    <string name="recycler_top_rate_offered">शीर्ष ऑफ़र दर • %1$s</string>
+
+    <!-- ===== Empty states ===== -->
+    <string name="empty_no_lot_matches">चयनित फ़िल्टर से कोई लॉट मेल नहीं खाता</string>
+    <string name="empty_no_lots_yet">अभी तक कोई डिजिटल लॉट नहीं बनाया गया</string>
+    <string name="empty_clear_or_scan">फ़िल्टर हटाएं या नया ई-कचरा स्कैन करें</string>
+    <string name="empty_tap_scan">सामग्री की फ़ोटो और मूल्यांकन के लिए \'स्कैन ई-कचरा\' पर टैप करें</string>
+    <string name="empty_tap_create">सामग्री की फ़ोटो और मूल्यांकन के लिए \'लॉट बनाएं\' पर टैप करें</string>
+
+    <!-- ===== Header / navigation ===== -->
+    <string name="header_e_waste_collector">ई-कचरा संग्राहक</string>
+    <string name="header_cpcb_verified_collector">CPCB सत्यापित संग्राहक</string>
+    <string name="header_view_all_lots">सभी डिजिटल लॉट देखें</string>
+    <string name="header_scan_e_waste">ई-कचरा स्कैन करें</string>
+    <string name="header_create_new_lot">नया डिजिटल लॉट बनाएं</string>
+    <string name="header_safety_guidelines">सुरक्षा दिशानिर्देश</string>
+    <string name="header_safety_subtitle">खतरनाक ई-कचरे को संभालने की सुरक्षा</string>
+
+    <!-- ===== Location sharing ===== -->
+    <string name="location_sharing_on">स्थान साझा करना ON</string>
+    <string name="location_sharing_off">स्थान साझा करना OFF</string>
+    <string name="location_visibility_note">केवल आसपास के ई-कचरा संग्राहकों को दिखता है (पता / फ़ोन नहीं)</string>
+    <string name="location_aggregators_optimise">एग्रीगेटर स्वतः पिकअप मार्ग बेहतर बनाते हैं</string>
+    <string name="location_km_away">%1$.1f किमी दूर</string>
+    <string name="location_ledger_proof">बैंक क्रेडिट और औपचारिक पहचान के लिए दस्तावेज़बद्ध लेनदेन प्रमाण</string>
+
+    <!-- ===== Lot status chips ===== -->
+    <string name="lot_paid_in_cash">नकद भुगतान हो गया</string>
+    <string name="lot_handover_pending">हस्तांतरण लंबित</string>
+</resources>

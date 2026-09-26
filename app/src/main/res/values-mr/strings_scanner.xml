@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_ai_e_waste_visual_scanner">AI ई-कचरा स्कॅनर</string>
+    <string name="scan_point_camera_at_circuit_board_battery_phone_or_w">ई-कचऱ्यावर कॅमेरा रोखा</string>
+    <string name="scan_scanresults_count_it_ishazardous_scanned_item_s_">स्कॅन केलेल्या ${scanResults.count { it.isHazardous }} वस्तूंमध्ये धोकादायक पदार्थ आहेत. खालील विल्हेवाट पायऱ्या पाळा.</string>
+</resources>

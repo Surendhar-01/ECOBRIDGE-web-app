@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="map_authorized_collection_points">अधिकृत ई-कचरा संग्रहण केंद्र</string>
+    <string name="map_showing_recyclers_sorted_by_distance_tap_view_on">दूरी के अनुसार रीसायकलर। लाइव रूट के लिए \'मैप पर देखें\' या \'दिशा-निर्देश\' टैप करें।</string>
+    <string name="map_your_location_collector">आपका स्थान (संग्राहक)</string>
+    <string name="map_tap_any_pin_on_map_or_switch_to_list_to_navigate">मैप पर किसी भी पिन को टैप करें या लिस्ट 📋 पर स्विच करें</string>
+</resources>

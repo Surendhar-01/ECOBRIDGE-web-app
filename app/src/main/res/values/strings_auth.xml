@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Role sign-in / sign-up ===== -->
+    <string name="auth_title_suffix">%1$s Authentication</string>
+    <string name="auth_have_account">Already registered? Sign in</string>
+    <string name="auth_need_account">New here? Create an account</string>
+    <string name="auth_footer_legal">Statutory E-Waste (Management) Rules, 2022 • Supabase Auth • Central Pollution Control Board (CPCB) Verified</string>
+    <string name="auth_use_different_account">Use a different account</string>
+    <string name="auth_create_account_title">Create %1$s Account</string>
+    <string name="auth_create_account_body">Your details are registered securely in Supabase. Sign in afterwards with the same email and password.</string>
+    <string name="auth_official_email_title">Official Email Authentication</string>
+    <string name="auth_official_email_body">Sign in via Supabase Auth with your registered official email and password.</string>
+    <string name="auth_google_title">Google Identity Sign-In</string>
+    <string name="auth_google_subtitle">Credential Manager + Supabase ID Token</string>
+    <string name="auth_google_body">Sign in with your verified Google Account. The id_token is securely exchanged with Supabase, then statutory credentials are validated against the CPCB National Registry.</string>
+    <string name="auth_oauth_label" translatable="false">OAuth 2.0</string>
+    <string name="auth_google_tab">Google Sign-In</string>
+    <string name="auth_email_tab">Email &amp; Password</string>
+    <string name="auth_otp_tab">OTP Verification</string>
+    <string name="auth_incoming_alerts_title">Received Inboxes &amp; Alerts</string>
+    <string name="auth_opening_collector">Opening Informal Collector login…</string>
+    <string name="auth_opening_recycler">Opening Formal Recycler login…</string>
+    <string name="auth_opening_admin">Opening Government Admin login…</string>
+
+    <string name="auth_instructions_collector">Login with registered mobile OTP, official email, or Google account for certified aggregator access.</string>
+    <string name="auth_instructions_recycler">Statutory CPCB-authorized recycler portal. Sign in with registered mobile, enterprise email, or Google account.</string>
+    <string name="auth_instructions_admin">CPCB / MoEFCC Official Administration Gateway. Authenticate via authorized mobile OTP, gov email, or Google account.</string>
+
+    <string name="error_access_denied">Access Denied</string>
+    <string name="error_role_mismatch">This account is registered as %1$s. It cannot access the %2$s portal.</string>
+    <string name="cd_hear_auth_guidance">Hear Authentication Guidance</string>
+    <string name="cd_error">Error</string>
+    <string name="cd_info">Info</string>
+    <string name="cd_google_sign_in">Google Sign In</string>
+
+    <!-- ===== Form fields ===== -->
+    <string name="field_full_name">Full Name</string>
+    <string name="field_full_name_hint">Your full name</string>
+    <string name="field_mobile">Mobile Number</string>
+    <string name="field_mobile_hint">10-digit mobile</string>
+    <string name="field_email">Email Address</string>
+    <string name="field_email_hint" translatable="false">you@example.com</string>
+    <string name="field_password_short">Password</string>
+    <string name="field_official_email">Official Email Address</string>
+    <string name="field_password">Password (min 6 characters)</string>
+    <string name="field_password_hint">Choose a password</string>
+    <string name="field_confirm_password">Confirm Password</string>
+    <string name="field_confirm_password_hint">Repeat your password</string>
+    <string name="phone_with_prefix">+91 %1$s</string>
+
+    <!-- ===== OTP flow ===== -->
+    <string name="otp_verification_pipeline_title">Statutory Verification Pipeline</string>
+    <string name="otp_card_title">Multi-Channel OTP Authentication</string>
+    <string name="otp_card_subtitle">Generate and receive secure OTP on your registered Mobile (+91 SMS), Email, and Google Account.</string>
+    <string name="otp_select_channel">Select Delivery Channel</string>
+    <string name="otp_select_destination">Select OTP Delivery Destination:</string>
+    <string name="otp_all_channels_title">All Channels (Mobile + Email + Google)</string>
+    <string name="otp_all_channels_subtitle">Simultaneously dispatch OTP across SMS, Email, and Google</string>
+    <string name="otp_mobile_title">Registered Mobile Number (+91 SMS)</string>
+    <string name="otp_mobile_subtitle">Instant SMS dispatch via Govt. Telecom Gateway</string>
+    <string name="otp_email_title">Registered Official Email</string>
+    <string name="otp_email_subtitle">Secure HTML email to your statutory inbox</string>
+    <string name="otp_google_title">Google Account Identity</string>
+    <string name="otp_google_subtitle">Google Security Alert &amp; in-app verification</string>
+    <string name="otp_label_mobile">Registered Mobile Number</string>
+    <string name="otp_label_email">Registered Email Address</string>
+    <string name="otp_label_google">Google Account Email</string>
+    <string name="otp_generate_button">Generate Authentication OTP</string>
+    <string name="otp_generating">Generating &amp; Dispatching OTP…</string>
+    <string name="otp_sent_live">We sent a 6-digit verification code to</string>
+    <string name="otp_sent_demo">Demo OTP generated for</string>
+    <string name="otp_sent_notice">OTP sent to registered mobile +91 %1$s</string>
+    <string name="otp_step2_title">Step 2 — Enter Verification Code</string>
+    <string name="otp_credentials_accepted">Credentials accepted for %1$s. Complete sign-in with the code below.</string>
+    <string name="otp_enter_code_header">Enter 6-Digit OTP Code</string>
+    <string name="otp_verifying">Verifying Credentials…</string>
+    <string name="otp_verify_and_login">Verify OTP &amp; Sign In</string>
+    <string name="otp_resend">Resend OTP</string>
+    <string name="otp_resend_in">Resend OTP in %1$d s</string>
+    <string name="otp_auto_fill">Auto-Fill OTP</string>
+    <string name="otp_copy">Copy OTP</string>
+    <string name="otp_listen">Listen to OTP</string>
+    <string name="otp_invalid_code">Invalid OTP code. Please enter the 6-digit code sent to your mobile.</string>
+    <string name="otp_invalid_phone">Please enter a valid 10-digit mobile number.</string>
+    <string name="otp_security_note">For your security, we will never ask you to read or share this code.</string>
+    <string name="otp_received_dispatches_title">Received Inboxes &amp; Alerts (Live)</string>
+    <string name="action_change_number">Change Number</string>
+
+    <!-- Spoken to the user by the text-to-speech engine. -->
+    <string name="otp_spoken_message">Your 6-digit verification code is %1$s. Valid for 5 minutes.</string>
+
+    <!-- ===== Development-only demo OTP ===== -->
+    <string name="demo_otp_badge">DEMO MODE — OTP</string>
+    <string name="demo_otp_label">Your Demo OTP is:</string>
+    <string name="demo_otp_autofill">Auto-fill OTP (%1$s)</string>
+    <string name="demo_otp_body">Enter this Demo OTP to sign in. No SMS was sent.</string>
+    <string name="demo_otp_dev_note">Development-only OTP flow: the code is generated and shown on-device for testing. No SMS is sent. This flow must NOT be used in production.</string>
+
+    <!-- ===== Auth outcomes shown to the user ===== -->
+    <string name="auth_access_granted">Authentication confirmed. Access granted to %1$s portal.</string>
+    <string name="error_role_denied_account">Access Denied: This account is registered as %1$s. You cannot log in to the %2$s portal.</string>
+    <string name="error_role_denied_assigned">Access Denied: This account is registered as %1$s. You can only log in through the %1$s portal.</string>
+    <string name="error_role_denied_session">Access Denied: Login session was initiated for %1$s. You cannot complete sign-in to the %2$s portal.</string>
+    <string name="error_role_denied_phone">Access Denied: Mobile number +91 %1$s is registered as %2$s. You cannot log in to the %3$s portal.</string>
+    <string name="error_no_profile">No profile assigned to this account. Contact the CPCB helpdesk to complete onboarding.</string>
+    <string name="error_no_role_assigned">No recognized role has been assigned to this account.</string>
+    <string name="error_password_too_short">Password must be at least 6 characters long.</string>
+
+    <!-- ===== OTP delivery channels ===== -->
+    <string name="auth_tab_mobile">Mobile Number</string>
+    <string name="auth_tab_google_continue">Continue with Google</string>
+    <string name="channel_all_title">All Channels (Mobile + Email + Google)</string>
+    <string name="channel_all_subtitle">Receives identical verification code on Mobile SMS, Email, and Google Account simultaneously</string>
+    <string name="channel_all_badge">Recommended</string>
+    <string name="channel_mobile_title">Registered Mobile No</string>
+    <string name="channel_mobile_subtitle">Direct cellular SMS &amp; Android push alert (+91)</string>
+    <string name="channel_mobile_badge">SMS OTP</string>
+    <string name="channel_email_title">Registered Email</string>
+    <string name="channel_email_subtitle">Official verification dispatch to your registered inbox</string>
+    <string name="channel_email_badge">Email OTP</string>
+    <string name="channel_google_title">Google Account</string>
+    <string name="channel_google_subtitle">Delivered to your connected Google Account / Gmail</string>
+    <string name="channel_google_badge">Google Code</string>
+    <string name="status_active_verified">Active &amp; Verified</string>
+
+    <!-- ===== Account status ===== -->
+    <string name="status_pending_verification">Pending KYC / Registration Approval</string>
+    <string name="status_rejected">Rejected / KYC Non-Compliant</string>
+    <string name="status_suspended">Suspended / Compliance Audit Flagged</string>
+    <string name="status_disabled">Disabled by Administrator</string>
+
+    <!-- ===== Verification pipeline steps ===== -->
+    <string name="step_awaiting_credentials">Awaiting credentials</string>
+    <string name="step_authenticating_user">Authenticating user credentials…</string>
+    <string name="step_verifying_account">Verifying account status &amp; KYC…</string>
+    <string name="step_verifying_role">Verifying statutory role authorization…</string>
+    <string name="step_verifying_permissions">Validating role permissions &amp; compliance…</string>
+    <string name="step_login_success">Login success: Access granted</string>
+    <string name="step_authentication_failed">Authentication failed</string>
+
+    <!-- ===== Error messages ===== -->
+    <string name="err_provider_not_configured">Authentication provider is not configured. Contact the administrator.</string>
+    <string name="err_network">Unable to reach the authentication server. Check your internet connection and try again.</string>
+    <string name="err_invalid_otp">The verification code is invalid or has expired. Please request a new code.</string>
+    <string name="err_otp_not_requested">No active verification code. Request an OTP first.</string>
+    <string name="err_invalid_credentials">Invalid email or password. Please check your credentials.</string>
+    <string name="err_email_not_confirmed">This email is registered but not yet confirmed.</string>
+    <string name="err_account_not_found">No account is registered with these details.</string>
+    <string name="err_account_gated">Your account is not active yet.</string>
+    <string name="err_role_mismatch">This account is registered under a different role.</string>
+    <string name="err_role_not_assigned">No role has been assigned to this account.</string>
+    <string name="err_email_registered">An account with this email already exists.</string>
+    <string name="err_generic">Authentication failed. Please try again.</string>
+</resources>

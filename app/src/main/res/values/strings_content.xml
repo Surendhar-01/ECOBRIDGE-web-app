@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Labels for the code-valued columns that live in Supabase. The codes
+      themselves never change; only their display label is localized, so a row
+      written in one language renders correctly in all three.
+      See supabase/migrations/0008_localized_content.sql for the CHECK
+      constraints that pin each code set.
+    -->
+
+    <!-- material_prices.trend -->
+    <string name="trend_up">Rising</string>
+    <string name="trend_down">Falling</string>
+    <string name="trend_stable">Stable</string>
+
+    <!-- safety_guidelines.alert_level -->
+    <string name="alert_critical">Critical</string>
+    <string name="alert_high">High</string>
+    <string name="alert_medium">Medium</string>
+    <string name="alert_low">Low</string>
+
+    <!-- collector_lots.payment_mode / collector_transactions.payment_mode -->
+    <string name="payment_cash">Instant cash at handover</string>
+    <string name="payment_upi">Direct UPI transfer</string>
+    <string name="payment_bank">Direct bank deposit</string>
+
+    <!-- connection_requests.status -->
+    <string name="request_pending">Pending</string>
+    <string name="request_accepted">Accepted</string>
+    <string name="request_rejected">Rejected</string>
+    <string name="request_blocked">Blocked</string>
+    <string name="request_reported">Reported</string>
+
+    <!-- quotations.status -->
+    <string name="quotation_pending">Pending</string>
+    <string name="quotation_sent">Sent</string>
+    <string name="quotation_accepted">Accepted</string>
+    <string name="quotation_rejected">Rejected</string>
+    <string name="quotation_expired">Expired</string>
+    <string name="quotation_withdrawn">Withdrawn</string>
+
+    <!-- authorized_recyclers.authorization_status -->
+    <string name="authz_active">Authorized &amp; active</string>
+    <string name="authz_pending">Authorization pending</string>
+    <string name="authz_expired">Authorization expired</string>
+    <string name="authz_suspended">Authorization suspended</string>
+
+    <!-- lot_photos.upload_status -->
+    <string name="upload_pending">Upload pending</string>
+    <string name="upload_complete">Uploaded</string>
+    <string name="upload_failed">Upload failed</string>
+
+    <!--
+      Relative timestamps for material_prices. The legacy `date_updated` column
+      held frozen English strings such as '2 days ago'; the client formats the
+      real `updated_at` instant instead, so the wording stays correct and the
+      language follows the user's choice.
+    -->
+    <string name="relative_just_now">just now</string>
+    <string name="relative_minutes_ago">%1$d min ago</string>
+    <string name="relative_hours_ago">%1$d hr ago</string>
+    <string name="relative_days_ago">%1$d days ago</string>
+    <string name="relative_today">Today</string>
+    <string name="relative_yesterday">Yesterday</string>
+</resources>

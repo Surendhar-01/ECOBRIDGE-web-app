@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="map_authorized_collection_points">Authorized Collection Points</string>
+    <string name="map_showing_recyclers_sorted_by_distance_tap_view_on">Showing recyclers sorted by distance. Tap \'View on Map\' or \'Navigate\' for live route.</string>
+    <string name="map_your_location_collector">Your Location (Collector)</string>
+    <string name="map_tap_any_pin_on_map_or_switch_to_list_to_navigate">Tap any pin on map or switch to List 📋 to navigate</string>
+</resources>
