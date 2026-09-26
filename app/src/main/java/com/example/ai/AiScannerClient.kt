@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import android.util.Base64
 import android.util.Log
 import com.example.BuildConfig
-import com.example.model.HazardSafetyInfo
 import com.example.model.Language
 import com.example.model.MaterialCategory
 import kotlinx.coroutines.Dispatchers

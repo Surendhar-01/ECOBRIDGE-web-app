@@ -145,7 +145,7 @@ export const en = {
   'error.invalidCredentials': 'Invalid email or password. If your earlier signup failed, create the account again first.',
   'error.emailNotConfirmed': 'Confirm your email address before signing in.',
   'error.authRateLimited': 'Too many sign-in attempts. Wait a few minutes and try again.',
-  'error.signupRateLimited': 'Too many signup or confirmation-email requests. Wait before trying again, or sign in if the account was already created.',
+  'error.signupRateLimited': 'Too many signup requests from this device. Wait a minute and try again. If you already signed up, try signing in instead.',
   'error.accountAlreadyExists': 'An account already exists for this email. Sign in or reset its password.',
   'error.weakPassword': 'Choose a stronger password with at least six characters.',
   'error.signupFailed': 'Account creation failed. Please try again later.',

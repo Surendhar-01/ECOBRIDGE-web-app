@@ -300,7 +300,7 @@ export class AuthService {
       if (err instanceof ForbiddenException) {
         throw err;
       }
-      this.logger.warn(`Could not verify profile from Supabase: ${err?.message}`);
+      this.logger.warn(`Could not verify profile from Supabase: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 
@@ -326,7 +326,7 @@ export class AuthService {
       if (error || !data?.role) return null;
       return data.role as string;
     } catch (err) {
-      this.logger.warn(`Role lookup failed: ${err?.message}`);
+      this.logger.warn(`Role lookup failed: ${err instanceof Error ? err.message : String(err)}`);
       return null;
     }
   }
