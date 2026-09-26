@@ -66,6 +66,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -115,6 +116,7 @@ fun FormalRecyclerPortalScreen(
 
     var recyclerTab by remember { mutableIntStateOf(0) } // 0 Dashboard, 1 Inbound Lots, 2 Weigh-in, 3 Reports, 4 Profile
     var showQrDialog by remember { mutableStateOf(false) }
+    var paymentLot by remember { mutableStateOf<MaterialLot?>(null) }
     var showManualWeighIn by remember { mutableStateOf(false) }
     var manifestLot by remember { mutableStateOf<MaterialLot?>(null) }
     var recyclerLotFilter by remember { mutableStateOf<String?>(null) } // null All, "awaiting", "verified"
@@ -597,6 +599,42 @@ fun FormalRecyclerPortalScreen(
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(text = "EPR Traceability Certificate Issued (${lot.eprCertificateNo ?: "CPCB-EPR"})", fontSize = 11.sp, color = SuccessGreen, fontWeight = FontWeight.SemiBold)
                             }
+
+                            // Weighed in but not yet settled: this is where the
+                            // recycler actually pays the informal collector.
+                            if (lot.statusName in com.example.data.EwasteRepository.PAYABLE_STATUSES) {
+                                Spacer(modifier = Modifier.height(10.dp))
+                                val dueInr = Math.round(lot.weightKg * lot.quotedRatePerKg * 100.0) / 100.0
+                                Button(
+                                    onClick = {
+                                        paymentLot = lot
+                                        viewModel.loadPayee(lot.lotId, lot.matchedRecyclerName ?: "Informal Collector")
+                                    },
+                                    colors = ButtonDefaults.buttonColors(containerColor = EcoGreenPrimary),
+                                    shape = RoundedCornerShape(10.dp),
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .testTag("recycler_pay_${lot.lotId}")
+                                ) {
+                                    Text(
+                                        text = "Pay collector ₹${"%,.2f".format(dueInr)}",
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = 12.sp
+                                    )
+                                }
+                            } else if (lot.statusName == com.example.model.LotStatus.PAYMENT_COMPLETED.name) {
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Icon(imageVector = Icons.Default.CheckCircle, contentDescription = null, tint = SuccessGreen, modifier = Modifier.size(16.dp))
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = "Payment received · ${lot.paymentModeName.ifBlank { "settled" }}",
+                                        fontSize = 11.sp,
+                                        color = SuccessGreen,
+                                        fontWeight = FontWeight.SemiBold
+                                    )
+                                }
+                            }
                         }
                     }
                 }
@@ -637,9 +675,49 @@ fun FormalRecyclerPortalScreen(
             lots = lots.filter { !it.recyclerConfirmed },
             onWeighIn = { lotId ->
                 showQrDialog = false
-                viewModel.confirmRecyclerHandover(lotId, markPaid = true)
+                // Weigh-in only. Settling the payment is a separate, explicit step
+                // so the money movement is recorded with a mode and a reference.
+                viewModel.confirmRecyclerHandover(lotId, markPaid = false)
             },
             onDismiss = { showQrDialog = false }
+        )
+    }
+
+    paymentLot?.let { lot ->
+        val payee by viewModel.payee.collectAsState()
+        PaymentSheet(
+            lot = lot,
+            collectorName = payee?.name ?: lot.matchedRecyclerName ?: "Informal Collector",
+            collectorUpiId = payee?.upiId,
+            onConfirm = { mode, reference ->
+                val vpa = payee?.upiId
+                val payeeLabel = payee?.name ?: lot.matchedRecyclerName ?: "Informal Collector"
+                paymentLot = null
+                viewModel.clearPayee()
+                if (mode == com.example.model.PaymentMode.UPI) {
+                    val dueInr = Math.round(lot.weightKg * lot.quotedRatePerKg * 100.0) / 100.0
+                    val ref = reference ?: ("ECO-" + lot.lotId)
+                    val problem = com.example.payment.UpiPayment.launch(
+                        context = LocalContext.current,
+                        payeeVpa = vpa,
+                        payeeName = payeeLabel,
+                        amountInr = dueInr,
+                        note = "ECOBRIDGES lot ${lot.lotId}",
+                        transactionRef = ref
+                    )
+                    if (problem != null) {
+                        // No UPI app installed, or no VPA on file. Record it directly
+                        // rather than dropping the payment on the floor.
+                        viewModel.recordPayment(lot.lotId, mode, reference, lot.weightKg)
+                    }
+                } else {
+                    viewModel.recordPayment(lot.lotId, mode, reference, lot.weightKg)
+                }
+            },
+            onDismiss = {
+                paymentLot = null
+                viewModel.clearPayee()
+            }
         )
     }
 

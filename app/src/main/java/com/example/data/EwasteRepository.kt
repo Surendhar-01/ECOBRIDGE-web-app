@@ -9,6 +9,7 @@ import com.example.model.PaymentMode
 import com.example.model.PriceRecord
 import com.example.model.UnitEconomicsData
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -306,6 +307,82 @@ class EwasteRepository(
         ledgerDao.insertTransaction(txn)
     }
 
+    /**
+     * Records a payment from the formal recycler to the informal collector.
+     *
+     * The amount is always derived here from the lot's own agreed rate and the
+     * verified weigh-in, never from a caller-supplied figure, so a buggy or
+     * tampered client cannot invent a price. Writing the ledger row and advancing
+     * the lot to PAYMENT_COMPLETED is idempotent per lot: a second call updates
+     * the same transaction id rather than creating a duplicate credit.
+     *
+     * @param verifiedWeightKg the weigh-in figure; falls back to the declared weight.
+     * @return the settled transaction, or null when the lot does not exist locally.
+     */
+    suspend fun recordPayment(
+        lotId: String,
+        mode: PaymentMode,
+        reference: String?,
+        verifiedWeightKg: Double? = null
+    ): TransactionLedgerEntity? {
+        val existing = lotDao.getLotById(lotId) ?: return null
+        val weight = verifiedWeightKg ?: existing.weightKg
+        if (weight <= 0.0 || existing.quotedRatePerKg <= 0.0) return null
+        val amount = Math.round(weight * existing.quotedRatePerKg * 100.0) / 100.0
+        val now = System.currentTimeMillis()
+        val receipt = existing.handoverReceiptNumber ?: ("RC-" + lotId)
+        val txnId = "TXN-" + lotId
+
+        // Settle the lot first so the status reflects the payment even if the
+        // ledger write below is interrupted.
+        lotDao.updateLot(
+            existing.copy(
+                weightKg = weight,
+                estimatedValueInr = amount,
+                statusName = LotStatus.PAYMENT_COMPLETED.name,
+                paymentModeName = mode.name,
+                handoverReceiptNumber = receipt,
+                recyclerConfirmed = true,
+                isSynced = false
+            )
+        )
+
+        val prior = ledgerDao.getTransactionByLot(lotId)
+        val txn = (prior?.copy(
+            weightKg = weight,
+            ratePerKg = existing.quotedRatePerKg,
+            totalAmountInr = amount,
+            paymentMode = mode.name,
+            recyclerName = existing.matchedRecyclerName ?: "Authorized Recycler",
+            timestamp = now,
+            receiptNumber = receipt,
+            isSettled = true,
+            paymentReference = reference?.trim()?.ifBlank { null },
+            paidAt = now
+        )) ?: TransactionLedgerEntity(
+            transactionId = txnId,
+            lotId = lotId,
+            categoryName = existing.categoryName,
+            weightKg = weight,
+            ratePerKg = existing.quotedRatePerKg,
+            totalAmountInr = amount,
+            paymentMode = mode.name,
+            recyclerName = existing.matchedRecyclerName ?: "Authorized Recycler",
+            timestamp = now,
+            receiptNumber = receipt,
+            isSettled = true,
+            paymentReference = reference?.trim()?.ifBlank { null },
+            paidAt = now
+        )
+        ledgerDao.insertTransaction(txn)
+        return txn
+    }
+
+    /** Lots a formal recycler may pay: handed over or verified, and not yet settled. */
+    suspend fun getPayableLots(): List<MaterialLotEntity> = lotDao.getAllLots()
+        .first()
+        .filter { it.statusName in PAYABLE_STATUSES }
+
     /** Saves the formal recycler's Form-6 manifest against the shared lot. */
     suspend fun saveManifest(lotId: String, details: String) {
         val existing = lotDao.getLotById(lotId) ?: return
@@ -316,6 +393,16 @@ class EwasteRepository(
     fun getUnitEconomics(): List<UnitEconomicsData> = Companion.getUnitEconomics()
 
     companion object {
+        /**
+         * Lot states in which a payment is meaningful. Mirrors the state guard in
+         * the record_lot_payment database function, so the UI does not offer a Pay
+         * action the server will refuse.
+         */
+        val PAYABLE_STATUSES = setOf(
+            LotStatus.HANDOVER_PENDING.name,
+            LotStatus.RECYCLER_VERIFIED.name
+        )
+
         // Safety and Hazard Guidance Dataset
         fun getSafetyGuidance(): List<HazardSafetyInfo> {
             return listOf(

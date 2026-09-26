@@ -99,7 +99,11 @@ data class TransactionLedgerEntity(
     val recyclerName: String,
     val timestamp: Long,
     val receiptNumber: String,
-    val isSettled: Boolean
+    val isSettled: Boolean,
+    /** UPI / cheque / transfer reference. Null until a payment is actually made. */
+    val paymentReference: String? = null,
+    /** Epoch millis of the payment, or null while the lot is still unpaid. */
+    val paidAt: Long? = null
 )
 
 /**

@@ -31,7 +31,7 @@ import kotlinx.coroutines.CoroutineScope
         QuotationEntity::class,
         AuditLogEntity::class
     ],
-    version = 7,
+    version = 8,
     exportSchema = false
 )
 abstract class EwasteDatabase : RoomDatabase() {
@@ -92,6 +92,18 @@ abstract class EwasteDatabase : RoomDatabase() {
             }
         }
 
+        /**
+         * Adds the payment detail columns to the local ledger, mirroring
+         * supabase/migrations/0011_lot_payments.sql. Both are nullable so existing
+         * unsettled claims keep working untouched.
+         */
+        private val MIGRATION_7_8 = object : Migration(7, 8) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE transaction_ledger ADD COLUMN paymentReference TEXT")
+                db.execSQL("ALTER TABLE transaction_ledger ADD COLUMN paidAt INTEGER")
+            }
+        }
+
         fun getDatabase(context: Context, @Suppress("UNUSED_PARAMETER") scope: CoroutineScope): EwasteDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
@@ -99,7 +111,7 @@ abstract class EwasteDatabase : RoomDatabase() {
                     EwasteDatabase::class.java,
                     "ewaste_moefcc_database"
                 )
-                    .addMigrations(MIGRATION_5_6, MIGRATION_6_7)
+                    .addMigrations(MIGRATION_5_6, MIGRATION_6_7, MIGRATION_7_8)
                     .fallbackToDestructiveMigration(true)
                     .build()
                 INSTANCE = instance

@@ -3266,7 +3266,17 @@ fun LedgerAndEconomicsTab(
                             color = TextSecondaryMuted
                         )
                         Text(
-                            text = if (txn.isSettled) stringResource(R.string.lot_paid_in_cash) else stringResource(R.string.lot_handover_pending),
+                            text = if (txn.isSettled) {
+                                // The method actually used, not a hardcoded "cash":
+                                // a recycler may settle by UPI or bank transfer.
+                                stringResource(
+                                    when (txn.paymentMode) {
+                                        "UPI" -> R.string.payment_upi
+                                        "BANK_TRANSFER" -> R.string.payment_bank
+                                        else -> R.string.payment_cash
+                                    }
+                                )
+                            } else stringResource(R.string.lot_handover_pending),
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp,
                             color = if (txn.isSettled) SuccessGreen else WarningAmber
@@ -3280,6 +3290,14 @@ fun LedgerAndEconomicsTab(
                         fontSize = 10.sp,
                         color = TextSecondaryMuted
                     )
+
+                    if (txn.isSettled && !txn.paymentReference.isNullOrBlank()) {
+                        Text(
+                            text = "Ref: ${txn.paymentReference}",
+                            fontSize = 10.sp,
+                            color = TextSecondaryMuted
+                        )
+                    }
                 }
             }
         }

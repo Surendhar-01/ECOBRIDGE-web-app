@@ -69,7 +69,9 @@ object CloudSyncManager {
         val recycler_name: String,
         val timestamp: Long,
         val receipt_number: String,
-        val is_settled: Boolean
+        val is_settled: Boolean,
+        val payment_reference: String? = null,
+        val paid_at: String? = null
     )
 
     @Serializable
@@ -592,7 +594,9 @@ private fun TransactionLedgerEntity.toSyncDto(userId: String): CloudSyncManager.
         recycler_name = recyclerName,
         timestamp = timestamp,
         receipt_number = receiptNumber,
-        is_settled = isSettled
+        is_settled = isSettled,
+        payment_reference = paymentReference,
+        paid_at = paidAt?.let { java.time.Instant.ofEpochMilli(it).toString() }
     )
 
 private fun LotPhotoEntity.toDto(userId: String): CloudSyncManager.LotPhotoDto =
@@ -742,7 +746,9 @@ fun CloudSyncManager.CollectorTxnDto.toEntity(): TransactionLedgerEntity = Trans
     recyclerName = recycler_name,
     timestamp = timestamp,
     receiptNumber = receipt_number,
-    isSettled = is_settled
+    isSettled = is_settled,
+    paymentReference = payment_reference,
+    paidAt = paid_at?.let { runCatching { java.time.Instant.parse(it).toEpochMilli() }.getOrNull() }
 )
 
 fun CloudSyncManager.PriceDto.toEntity(): PriceRecordEntity = PriceRecordEntity(
