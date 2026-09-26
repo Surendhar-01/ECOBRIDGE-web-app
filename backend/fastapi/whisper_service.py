@@ -17,6 +17,14 @@ logger = logging.getLogger("WhisperService")
 # Supported language codes
 SUPPORTED_LANGUAGES = ["hi", "mr", "en"]
 
+
+class SpeechToTextUnavailable(RuntimeError):
+    """Raised when audio cannot be transcribed because no STT backend is loaded.
+
+    Distinct from a generic failure so the HTTP layer can answer 503 (this
+    service is not able to do this job) instead of 500 (something broke).
+    """
+
 class WhisperSpeechService:
     def __init__(self):
         self.model_size = os.getenv("WHISPER_MODEL_SIZE", "base")
@@ -28,6 +36,10 @@ class WhisperSpeechService:
         # serve the NLP layer only; transcribe_audio then uses the mock path.
         self.enabled = os.getenv("WHISPER_ENABLED", "true").strip().lower() not in (
             "false", "0", "no", "off"
+        )
+        # Placeholder transcripts are opt-in. See _generate_simulated_transcription.
+        self.allow_mock = os.getenv("WHISPER_MOCK_TRANSCRIPT", "false").strip().lower() in (
+            "true", "1", "yes", "on"
         )
         # Loading downloads the model, which is slow and memory hungry. Do it on
         # first use rather than at import so /health answers immediately and the
@@ -138,12 +150,29 @@ class WhisperSpeechService:
         audio_bytes: bytes,
         lang: Optional[str]
     ) -> Dict[str, Any]:
-        """Provides high-accuracy simulated responses when running in environments without native audio hardware."""
+        """
+        Placeholder transcript for environments with no speech-to-text backend.
+
+        Off by default, and deliberately so. This previously ran as a catch-all
+        fallback, so real audio that failed to transcribe came back as a
+        confident, fabricated sentence - the caller could not tell real speech
+        from invented text. It now refuses unless WHISPER_MOCK_TRANSCRIPT is
+        explicitly enabled for local UI work with no audio hardware.
+        """
+        if not self.allow_mock:
+            raise SpeechToTextUnavailable(
+                "speech-to-text is not available on this host: the Whisper model is "
+                "not loaded (WHISPER_ENABLED=false or the model failed to load). "
+                "Enable WHISPER_ENABLED with a model that fits the available memory, "
+                "or set WHISPER_MOCK_TRANSCRIPT=true to accept placeholder text."
+            )
         selected_lang = lang or "en"
+        logger.warning("Returning a MOCK transcript. The audio was not transcribed.")
         return {
             "text": "Open informal collector login",
             "language": selected_lang,
-            "confidence": 0.98,
+            "confidence": 0.0,
             "is_hinglish": False,
-            "duration": 1.5
+            "duration": 0.0,
+            "mock": True
         }

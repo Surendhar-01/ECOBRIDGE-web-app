@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 
-from whisper_service import WhisperSpeechService
+from whisper_service import WhisperSpeechService, SpeechToTextUnavailable
 from nlp_intent_service import NlpIntentService
 
 logging.basicConfig(level=logging.INFO)
@@ -73,6 +73,11 @@ async def transcribe_audio(
         audio_content = await file.read()
         result = whisper_service.transcribe_audio(audio_content, preferred_language=language)
         return result
+    except SpeechToTextUnavailable as e:
+        # 503, not 500: this host has no speech-to-text backend loaded. The
+        # multilingual intent endpoint below still works.
+        logger.warning(f"Transcription unavailable: {e}")
+        raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         logger.error(f"Failed to transcribe audio file: {e}")
         raise HTTPException(status_code=500, detail=str(e))
@@ -114,6 +119,9 @@ async def process_full_voice_pipeline(request: Base64AudioRequest):
             "detectedLanguage": transcription.get("language"),
             "isHinglish": transcription.get("is_hinglish", False)
         }
+    except SpeechToTextUnavailable as e:
+        logger.warning(f"Voice pipeline unavailable: {e}")
+        raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         logger.error(f"Error in full voice pipeline: {e}")
         raise HTTPException(status_code=500, detail=str(e))
