@@ -55,10 +55,18 @@ export interface VoiceRouteDecision {
 export class VoiceIntentRouterService {
   private readonly logger = new Logger(VoiceIntentRouterService.name);
   private readonly fastApiVoiceUrl: string;
+  private readonly fastApiTimeoutMs: number;
 
   constructor() {
-    this.fastApiVoiceUrl = process.env.FASTAPI_VOICE_URL || 'http://localhost:8000';
-    this.logger.log(`VoiceIntentRouter initialized with FastAPI bridge at: ${this.fastApiVoiceUrl}`);
+    this.fastApiVoiceUrl = (process.env.FASTAPI_VOICE_URL || 'http://localhost:8000').replace(/\/+$/, '');
+    // A Render free-tier cold start can take far longer than a local call, so the
+    // budget is configurable. Exceeding it is not fatal: the native parser answers
+    // instead.
+    const configured = Number(process.env.FASTAPI_TIMEOUT_MS);
+    this.fastApiTimeoutMs = Number.isFinite(configured) && configured > 0 ? configured : 3500;
+    this.logger.log(
+      `VoiceIntentRouter initialized with FastAPI bridge at: ${this.fastApiVoiceUrl} (timeout ${this.fastApiTimeoutMs}ms)`,
+    );
   }
 
   /**
@@ -84,9 +92,17 @@ export class VoiceIntentRouterService {
           currentScreen: context.currentScreen,
           currentRole: userRole || context.currentRole,
         },
-        { timeout: 3500 }
+        { timeout: this.fastApiTimeoutMs }
       );
-      nlpResult = response.data;
+      // A 2xx is not proof of a usable payload: a proxy or an error page can come
+      // back with no intent. Fall back rather than dereferencing undefined below.
+      const data = response?.data;
+      if (data && typeof data === 'object' && typeof data.intent === 'string' && data.intent) {
+        nlpResult = data;
+      } else {
+        this.logger.warn('FastAPI NLP service returned no usable intent. Using native resilient semantic parser.');
+        nlpResult = this.nativeSemanticIntentParser(cleanText, context);
+      }
     } catch (err: any) {
       this.logger.warn(`FastAPI NLP service unavailable (${err.message}). Using native resilient semantic parser.`);
       nlpResult = this.nativeSemanticIntentParser(cleanText, context);

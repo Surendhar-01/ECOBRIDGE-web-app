@@ -1,0 +1,72 @@
+# Render blueprint for the two ECOBRIDGES backend services.
+# Deploy with: Render dashboard -> New -> Blueprint -> pick this repository.
+#
+# Service names below determine the public URLs:
+#   https://ecobridges-voice.onrender.com   (FastAPI: STT + multilingual NLP)
+#   https://ecobridges-api.onrender.com     (NestJS: auth, roles, voice bridge)
+#
+# Secrets are declared with `sync: false`, so Render prompts for them instead of
+# storing them in this file. Never commit real keys here.
+
+services:
+  # ---------------------------------------------------------------------------
+  # FastAPI - speech-to-text and the Hindi/Marathi/English/Hinglish intent layer.
+  # Deploy this FIRST: the NestJS bridge calls it.
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: ecobridges-voice
+    runtime: python
+    rootDir: backend/fastapi
+    plan: free
+    region: singapore
+    healthCheckPath: /health
+    # requirements-lite.txt omits faster-whisper, which is not imported when
+    # WHISPER_ENABLED=false. Swap to requirements.txt if you enable speech-to-text.
+    buildCommand: pip install -r requirements-lite.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: WHISPER_ENABLED
+        value: "false"
+      - key: WHISPER_MODEL_SIZE
+        value: tiny
+      - key: WHISPER_DEVICE
+        value: cpu
+      - key: WHISPER_COMPUTE_TYPE
+        value: int8
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+
+  # ---------------------------------------------------------------------------
+  # NestJS - Supabase auth, role authorization, and the FastAPI voice bridge.
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: ecobridges-api
+    runtime: node
+    rootDir: backend/nestjs
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_VERSION
+        value: "24.21.0"
+      # Point at the deployed FastAPI service above.
+      - key: FASTAPI_VOICE_URL
+        value: https://ecobridges-voice.onrender.com
+      # Free-tier cold starts exceed the local default of 3500ms, so give the
+      # bridge a real budget. Exceeding it falls back to the native parser.
+      - key: FASTAPI_TIMEOUT_MS
+        value: "20000"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OTP_MODE
+        value: demo

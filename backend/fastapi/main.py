@@ -52,6 +52,10 @@ def health_check():
     return {
         "status": "healthy",
         "service": "ECOBRIDGES FastAPI Voice Layer",
+        # False until the first transcription lazily loads the model, and False
+        # for good when WHISPER_ENABLED=false. The NLP intent layer below is
+        # always available regardless.
+        "whisperEnabled": whisper_service.enabled,
         "whisperReady": whisper_service.model is not None,
         "supportedLanguages": ["hi", "mr", "en", "hinglish"]
     }
@@ -116,4 +120,6 @@ async def process_full_voice_pipeline(request: Base64AudioRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Render (and most PaaS providers) inject the port to listen on. Bind to
+    # 0.0.0.0 so the container is reachable, and honour PORT when present.
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", "8000")))

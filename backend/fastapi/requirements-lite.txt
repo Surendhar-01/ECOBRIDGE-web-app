@@ -1,0 +1,23 @@
+# Lean dependency set for the NLP intent layer only.
+#
+# Same as requirements.txt minus faster-whisper (and its ctranslate2 / onnxruntime
+# / av / tokenizers chain), which is a large install and is not imported at all
+# when WHISPER_ENABLED=false. Use this to keep small hosts (e.g. a 512 MB Render
+# free instance) building fast and within disk limits.
+#
+# The multilingual intent service (nlp_intent_service.py) depends only on the
+# standard library, so it works fully with this file.
+#
+#   pip install -r requirements-lite.txt
+#   WHISPER_ENABLED=false uvicorn main:app --host 0.0.0.0 --port $PORT
+#
+# To enable speech-to-text, install requirements.txt instead and set
+# WHISPER_ENABLED=true.
+
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+numpy>=1.24.0
+python-multipart>=0.0.6
+requests>=2.31.0
+python-dotenv>=1.0.0

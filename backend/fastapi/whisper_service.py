@@ -8,6 +8,7 @@ and multi-script normalization.
 import io
 import os
 import logging
+import threading
 from typing import Dict, Any, Tuple, Optional
 
 logging.basicConfig(level=logging.INFO)
@@ -22,7 +23,32 @@ class WhisperSpeechService:
         self.device = os.getenv("WHISPER_DEVICE", "cpu")
         self.compute_type = os.getenv("WHISPER_COMPUTE_TYPE", "int8")
         self.model = None
-        self._initialize_model()
+        # Speech-to-text is optional. Set WHISPER_ENABLED=false on hosts without
+        # the RAM or disk for the model (e.g. a 512 MB Render free instance) to
+        # serve the NLP layer only; transcribe_audio then uses the mock path.
+        self.enabled = os.getenv("WHISPER_ENABLED", "true").strip().lower() not in (
+            "false", "0", "no", "off"
+        )
+        # Loading downloads the model, which is slow and memory hungry. Do it on
+        # first use rather than at import so /health answers immediately and the
+        # process is not killed by the platform before it finishes booting.
+        self._load_lock = threading.Lock()
+        self._load_attempted = False
+        if self.enabled and os.getenv("WHISPER_EAGER_LOAD", "false").strip().lower() in (
+            "true", "1", "yes", "on"
+        ):
+            self._ensure_model()
+
+    def _ensure_model(self):
+        """Load the model once, on first use. Returns the model or None."""
+        if self.model is not None or self._load_attempted or not self.enabled:
+            return self.model
+        with self._load_lock:
+            if self.model is not None or self._load_attempted:
+                return self.model
+            self._load_attempted = True
+            self._initialize_model()
+        return self.model
 
     def _initialize_model(self):
         try:
@@ -55,6 +81,9 @@ class WhisperSpeechService:
                 "confidence": 0.0,
                 "is_hinglish": False
             }
+
+        # First transcription triggers the model download/load.
+        self._ensure_model()
 
         if self.model is not None:
             try:
