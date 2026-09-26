@@ -4,11 +4,12 @@ import { useQuery } from '@tanstack/react-query'
 import { isSupabaseConfigured, supabase } from './lib/supabase'
 import { I18nProvider, useI18n, type I18n, type TranslationKey } from './i18n'
 import { LanguageSwitcher } from './i18n/LanguageSwitcher'
+import { VoiceAssistant } from './VoiceAssistant'
 import {
   ArrowRight, BarChart3, Bell, Building2, Camera, Check, ChevronRight, CircleDollarSign,
   ClipboardCheck, Clock3, Download, FileCheck2, Globe2, Home, Leaf, LogOut, MapPin,
   Menu, PackageCheck, Plus, Recycle, Search, ShieldCheck, Smartphone, Sparkles, Truck,
-  UserRound, Users, Weight, WifiOff, X,
+  UserRound, Users, Weight, WifiOff, X, Mic,
 } from 'lucide-react'
 
 type Role = 'collector' | 'recycler' | 'admin'
@@ -272,6 +273,7 @@ function Landing() {
             <span className="eyebrow"><Sparkles size={14} /> {t('landing.eyebrow')}</span>
             <h1>{t('landing.headingLine1')} <em>{t('landing.headingEmphasis')}</em><br />{t('landing.headingLine2')}</h1>
             <p>{t('landing.subtitle')}</p>
+            <button className="intro-voice-cta" onClick={() => window.dispatchEvent(new Event('ecobridge:start-voice'))}><span><Mic /></span><b>Speak to continue</b><small>Ask the AI assistant in English, Hindi, or Marathi</small></button>
             <div className="hero-actions"><button className="btn btn-primary btn-lg" onClick={() => navigate('/select-role')}>{t('landing.getStarted')} <ArrowRight size={18} /></button><a className="text-link" href="#how">{t('landing.seeHow')} <ChevronRight size={17} /></a></div>
             <div className="trust-row"><span><ShieldCheck /> {t('landing.trust.verified')}</span><span><FileCheck2 /> {t('landing.trust.proof')}</span><span><Globe2 /> {t('landing.trust.languages')}</span></div>
           </div>
@@ -711,7 +713,7 @@ function AppRoutes() {
     <Route path="/admin/reports" element={<Guard allow="admin"><AdminReports /></Guard>} />
     <Route path="/trace/:id" element={<Traceability />} />
     <Route path="*" element={<NotFound />} />
-  </Routes></AppProvider>
+  </Routes><VoiceAssistant /></AppProvider>
 }
 
 export default function App() {
