@@ -658,7 +658,7 @@ fun EwasteVoiceRecordingSheet(
                             )
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(
-                                text = "PROCESSING INTENT WITH GEMINI AI...",
+                                text = "PROCESSING INTENT WITH AI...",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = ForestGreenPrimary

@@ -26,4 +26,15 @@
     <string name="unit_kg">कि.ग्रा.</string>
     <string name="unit_rupees">₹%1$s</string>
     <string name="format_kg_value">%1$s कि.ग्रा.</string>
+
+    <!-- Language-neutral values, present in every locale on purpose -->
+    <string name="app_name">ECOBRIDGES</string>
+    <string name="language_english">English</string>
+    <string name="language_english_name">English</string>
+    <string name="language_hindi">हिन्दी</string>
+    <string name="language_hindi_name">Hindi</string>
+    <string name="language_marathi">मराठी</string>
+    <string name="language_marathi_name">Marathi</string>
+    <string name="auth_oauth_label">OAuth 2.0</string>
+    <string name="field_email_hint">you@example.com</string>
 </resources>
